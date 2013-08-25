@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="OpenStreetMap routing service" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+<![CDATA[]]>
+
+  <metadata>
+    <link href="://">
+      <text>OpenStreetMap routing service</text>
+    </link>
+    <time>2013-03-24T19:37:54+01:00</time>
+  </metadata>
+
+  <trk>
+    <name>Route</name>
+    <trkseg>
+      <trkpt lon="14.516616" lat="46.050908"></trkpt>
+      <trkpt lon="14.516575" lat="46.052120"></trkpt>
+      <trkpt lon="14.516698" lat="46.052945"></trkpt>
+      <trkpt lon="14.513902" lat="46.052949"></trkpt>
+      <trkpt lon="14.513607" lat="46.052970"></trkpt>
+      <trkpt lon="14.513343" lat="46.052989"></trkpt>
+      <trkpt lon="14.513170" lat="46.053009"></trkpt>
+      <trkpt lon="14.512635" lat="46.053104"></trkpt>
+      <trkpt lon="14.510439" lat="46.053548"></trkpt>
+      <trkpt lon="14.510439" lat="46.053548"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
