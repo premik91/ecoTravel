@@ -4,7 +4,7 @@
         <target device="tizen">false</target>
         <target device="mobileweb">false</target>
         <target device="iphone">true</target>
-        <target device="ipad">true</target>
+        <target device="ipad">false</target>
         <target device="blackberry">false</target>
         <target device="android">false</target>
     </deployment-targets>
@@ -13,9 +13,9 @@
     <name>ecotravel</name>
     <version>1.0</version>
     <publisher>not specified</publisher>
-    <url>not specified</url>
-    <description>not specified</description>
-    <copyright>not specified</copyright>
+    <url>http://www.opacelica.si</url>
+    <description>Application keeps track of savings in CO2 emissions.</description>
+    <copyright>© 2013</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -46,7 +46,11 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules/>
+    <modules>
+        <module platform="android">facebook</module>
+        <module platform="iphone">facebook</module>
+    </modules>
+    <property name="ti.facebook.appid">551670011523207</property>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

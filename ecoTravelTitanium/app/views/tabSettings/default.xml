@@ -1,0 +1,8 @@
+<Alloy>
+	<Tab id="tabSettings" icon="/icons/settings.png" title="Settings">	
+	<Window class="container" title="Settings" layout="vertical">
+		<Label id="label">Hello, Settings</Label>
+        <LoginButton id="fbButton" ns="Alloy.Globals.FBUser.fbModule"/>		
+	</Window>
+	</Tab>	
+</Alloy>

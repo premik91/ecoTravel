@@ -1,0 +1,12 @@
+<Alloy>
+	<Window id="journeyProgress" class="container" title="Journey Progress" layout="vertical">
+		<View layout="vertical" height="88%">
+			<Label id="journeyTime">00:00:00</Label>
+			<Label id="journeyDistance">0 meters</Label>
+        	<View id="mapview" ns="Ti.Map" animate="true" regionFit="true" userLocation="true" mapType="Ti.Map.STANDARD_TYPE"></View>	
+		</View>
+		<View layout="horizontal" height="12%">
+			<Button title="End journey" left="10" right="10" top="5" bottom="5" width=Titanium.UI.FILL onClick="endJourney"></Button>			
+		</View>
+	</Window>
+</Alloy>

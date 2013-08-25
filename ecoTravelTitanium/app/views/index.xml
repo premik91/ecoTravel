@@ -1,5 +1,8 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
-	</Window>
+	<TabGroup id="index" activeTabIconTint="#3A87AD" onFocus="tabFocus">
+		<Require src="tabJourney/default"/>
+		<Require src="tabStatistics/default"/>
+		<Require src="tabFriends/default"/>
+		<Require src="tabSettings/default"/>	
+	</TabGroup>
 </Alloy>

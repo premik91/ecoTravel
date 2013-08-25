@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab id="tabFriends" icon="/icons/friends.png" title="Friends">
+	<Window class="container" title="Jealous much?">
+		<Label id="label">Hello, Friends</Label>
+	</Window>
+	</Tab>
+</Alloy>

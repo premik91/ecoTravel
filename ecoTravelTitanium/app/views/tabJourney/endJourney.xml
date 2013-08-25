@@ -1,0 +1,13 @@
+<Alloy>
+	<Window id="endJourney" class="container" title="Journey Ended" layout="vertical">
+		<View layout="vertical" height="88%">
+			<Label>Journey statistics</Label>
+			<Label id="journeyTime"></Label>
+			<Label id="journeyPoints"></Label>
+			<Label id="journeyDistance"></Label>
+		</View>
+		<View layout="horizontal" height="12%">
+			<Button title="Finish journey" left="10" right="10" top="5" bottom="5" width=Titanium.UI.FILL onClick="finishJourney"></Button>			
+		</View>
+	</Window>
+</Alloy>

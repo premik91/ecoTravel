@@ -9,3 +9,15 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+// Message to display on app request to monitor users location
+Ti.Geolocation.purpose = 'Determine Current Location and to follow your journey';
+// iOS location accuracy
+Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_NEAREST_TEN_METERS;
+// The minimum change of position (in meters) before a location event is fired
+Ti.Geolocation.distanceFilter = 10;
+// The minium change of heading (in degrees) before a heading event is fired
+// Ti.Geolocation.headingFilter = 10;
+
+Alloy.Globals.FBUser = require("FacebookUser");
+Alloy.Globals.XHR = new (require("xhr"));

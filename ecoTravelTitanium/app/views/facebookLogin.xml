@@ -1,0 +1,7 @@
+<Alloy>
+	<Window id="FBWin" class="container" title="Facebook login" layout="vertical">
+		<Label>Please login with Facebook</Label>
+        <LoginButton id="fbButton" ns="Alloy.Globals.FBUser.fbModule"/>
+		<Button title="Nah, just let me in!" onClick="doPrijaviFB">
+	</Window>
+</Alloy>

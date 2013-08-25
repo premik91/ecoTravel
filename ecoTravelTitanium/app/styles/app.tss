@@ -1,0 +1,28 @@
+"Window": {
+	barColor: "#A2BF68",
+	backgroundColor: "#E5E5E5"
+	
+},
+"SearchBar": {
+	barColor: "#395B98"
+},
+"WebView": {
+	backgroundColor:'transparent',
+	top: 0, bottom: 0,
+	left: "0%", right: "0%"
+},
+"Label": {
+	font:{
+    	fontFamily: "Open Sans"
+   	}
+},
+".opensans": {
+	font:{
+    	fontFamily: "Open Sans"
+   	}
+},
+".breeserif": {
+	font:{
+    	fontFamily: "Bree Serif"
+   	}
+}

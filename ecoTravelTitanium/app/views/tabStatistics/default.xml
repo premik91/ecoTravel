@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab id="tabStatistics" icon="/icons/statistics.png" title="Statistics">	
+	<Window class="container" title="My statistics">
+		<Label id="label">Hello, Statistics</Label>
+	</Window>
+	</Tab>
+</Alloy>

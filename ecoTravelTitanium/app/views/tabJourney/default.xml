@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab id="tabJourney" icon="/icons/journey.png" title="Journey">
+	<Window class="container" title="Start new journey">
+		<Widget id="buttongrid" src="com.appcelerator.buttongrid"/>
+	</Window>
+	</Tab>
+</Alloy>
