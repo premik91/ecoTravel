@@ -81,7 +81,8 @@ function Controller() {
         }).getView();
         $.journeyProgress.close();
         endJourney.open({
-            modal: false
+            modal: true,
+            modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL
         });
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));

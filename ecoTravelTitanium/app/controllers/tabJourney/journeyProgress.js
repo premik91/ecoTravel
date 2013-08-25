@@ -114,9 +114,9 @@ function endJourney() {
 		'journeyTime': $.journeyTime.text, 
 		'journeyDistance': $.journeyDistance.text
 	}).getView();
-	$.journeyProgress.close();
 	endJourney.open({
 		modal : true,
-		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL
+		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
 	});
+	$.journeyProgress.close();	
 }
