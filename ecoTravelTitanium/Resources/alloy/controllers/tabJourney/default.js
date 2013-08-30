@@ -19,19 +19,19 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId7 = Ti.UI.createWindow({
+    $.__views.__alloyId6 = Ti.UI.createWindow({
         barColor: "#A2BF68",
         backgroundColor: "#E5E5E5",
         title: "Start new journey",
-        id: "__alloyId7"
+        id: "__alloyId6"
     });
     $.__views.buttongrid = Alloy.createWidget("com.appcelerator.buttongrid", "widget", {
         id: "buttongrid",
-        __parentSymbol: $.__views.__alloyId7
+        __parentSymbol: $.__views.__alloyId6
     });
-    $.__views.buttongrid.setParent($.__views.__alloyId7);
+    $.__views.buttongrid.setParent($.__views.__alloyId6);
     $.__views.tabJourney = Ti.UI.createTab({
-        window: $.__views.__alloyId7,
+        window: $.__views.__alloyId6,
         id: "tabJourney",
         icon: "/icons/journey.png",
         title: "Journey"

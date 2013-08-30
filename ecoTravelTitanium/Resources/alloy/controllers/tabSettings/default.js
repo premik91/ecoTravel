@@ -1,4 +1,5 @@
 function Controller() {
+    function privateSettingsChange() {}
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "tabSettings/default";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
@@ -6,13 +7,28 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId16 = Ti.UI.createWindow({
+    var __defers = {};
+    $.__views.__alloyId17 = Ti.UI.createWindow({
         barColor: "#A2BF68",
         backgroundColor: "#E5E5E5",
         title: "Settings",
         layout: "vertical",
-        id: "__alloyId16"
+        id: "__alloyId17"
     });
+    $.__views.__alloyId18 = Ti.UI.createLabel({
+        font: {
+            fontFamily: "Open Sans"
+        },
+        text: "Make my statistic public",
+        id: "__alloyId18"
+    });
+    $.__views.__alloyId17.add($.__views.__alloyId18);
+    $.__views.privateSettings = Ti.UI.createSwitch({
+        value: "True",
+        id: "privateSettings"
+    });
+    $.__views.__alloyId17.add($.__views.privateSettings);
+    privateSettingsChange ? $.__views.privateSettings.addEventListener("change", privateSettingsChange) : __defers["$.__views.privateSettings!change!privateSettingsChange"] = true;
     $.__views.label = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -20,14 +36,14 @@ function Controller() {
         text: "Hello, Settings",
         id: "label"
     });
-    $.__views.__alloyId16.add($.__views.label);
+    $.__views.__alloyId17.add($.__views.label);
     $.__views.fbButton = Alloy.Globals.FBUser.fbModule.createLoginButton({
         id: "fbButton",
         ns: "Alloy.Globals.FBUser.fbModule"
     });
-    $.__views.__alloyId16.add($.__views.fbButton);
+    $.__views.__alloyId17.add($.__views.fbButton);
     $.__views.tabSettings = Ti.UI.createTab({
-        window: $.__views.__alloyId16,
+        window: $.__views.__alloyId17,
         id: "tabSettings",
         icon: "/icons/settings.png",
         title: "Settings"
@@ -35,6 +51,7 @@ function Controller() {
     $.__views.tabSettings && $.addTopLevelView($.__views.tabSettings);
     exports.destroy = function() {};
     _.extend($, $.__views);
+    __defers["$.__views.privateSettings!change!privateSettingsChange"] && $.__views.privateSettings.addEventListener("change", privateSettingsChange);
     _.extend($, exports);
 }
 

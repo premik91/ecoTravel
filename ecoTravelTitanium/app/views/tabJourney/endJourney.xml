@@ -5,6 +5,8 @@
 			<Label id="journeyTime"></Label>
 			<Label id="journeyPoints"></Label>
 			<Label id="journeyDistance"></Label>
+			<Button title="Share via Facebook" width=Titanium.UI.FILL onClick="shareFacebook"></Button>	
+			<Button title="Share via Twitter" width=Titanium.UI.FILL onClick="shareTwitter"></Button>	
 		</View>
 		<View layout="horizontal" height="12%">
 			<Button title="Finish journey" left="10" right="10" top="5" bottom="5" width=Titanium.UI.FILL onClick="finishJourney"></Button>			

@@ -79,11 +79,11 @@ function Controller() {
             journeyTime: $.journeyTime.text,
             journeyDistance: $.journeyDistance.text
         }).getView();
-        $.journeyProgress.close();
         endJourney.open({
             modal: true,
-            modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL
+            modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
         });
+        $.journeyProgress.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "tabJourney/journeyProgress";
@@ -101,12 +101,12 @@ function Controller() {
         layout: "vertical"
     });
     $.__views.journeyProgress && $.addTopLevelView($.__views.journeyProgress);
-    $.__views.__alloyId12 = Ti.UI.createView({
+    $.__views.__alloyId13 = Ti.UI.createView({
         layout: "vertical",
         height: "88%",
-        id: "__alloyId12"
+        id: "__alloyId13"
     });
-    $.__views.journeyProgress.add($.__views.__alloyId12);
+    $.__views.journeyProgress.add($.__views.__alloyId13);
     $.__views.journeyTime = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -114,7 +114,7 @@ function Controller() {
         text: "00:00:00",
         id: "journeyTime"
     });
-    $.__views.__alloyId12.add($.__views.journeyTime);
+    $.__views.__alloyId13.add($.__views.journeyTime);
     $.__views.journeyDistance = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -122,10 +122,10 @@ function Controller() {
         text: "0 meters",
         id: "journeyDistance"
     });
-    $.__views.__alloyId12.add($.__views.journeyDistance);
-    var __alloyId13 = [];
+    $.__views.__alloyId13.add($.__views.journeyDistance);
+    var __alloyId14 = [];
     $.__views.mapview = Ti.Map.createView({
-        annotations: __alloyId13,
+        annotations: __alloyId14,
         id: "mapview",
         ns: Ti.Map,
         animate: "true",
@@ -133,24 +133,24 @@ function Controller() {
         userLocation: "true",
         mapType: Ti.Map.STANDARD_TYPE
     });
-    $.__views.__alloyId12.add($.__views.mapview);
-    $.__views.__alloyId14 = Ti.UI.createView({
+    $.__views.__alloyId13.add($.__views.mapview);
+    $.__views.__alloyId15 = Ti.UI.createView({
         layout: "horizontal",
         height: "12%",
-        id: "__alloyId14"
+        id: "__alloyId15"
     });
-    $.__views.journeyProgress.add($.__views.__alloyId14);
-    $.__views.__alloyId15 = Ti.UI.createButton({
+    $.__views.journeyProgress.add($.__views.__alloyId15);
+    $.__views.__alloyId16 = Ti.UI.createButton({
         title: "End journey",
         left: "10",
         right: "10",
         top: "5",
         bottom: "5",
         width: Titanium.UI.FILL,
-        id: "__alloyId15"
+        id: "__alloyId16"
     });
-    $.__views.__alloyId14.add($.__views.__alloyId15);
-    endJourney ? $.__views.__alloyId15.addEventListener("click", endJourney) : __defers["$.__views.__alloyId15!click!endJourney"] = true;
+    $.__views.__alloyId15.add($.__views.__alloyId16);
+    endJourney ? $.__views.__alloyId16.addEventListener("click", endJourney) : __defers["$.__views.__alloyId16!click!endJourney"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
@@ -161,7 +161,7 @@ function Controller() {
     var distance = 0;
     var distance_in_meters = true;
     var milliseconds = 0, seconds = 0, minutes = 0, hours = 0;
-    __defers["$.__views.__alloyId15!click!endJourney"] && $.__views.__alloyId15.addEventListener("click", endJourney);
+    __defers["$.__views.__alloyId16!click!endJourney"] && $.__views.__alloyId16.addEventListener("click", endJourney);
     _.extend($, exports);
 }
 

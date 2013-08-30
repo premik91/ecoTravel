@@ -1,7 +1,7 @@
 <Alloy>
 	<Tab id="tabFriends" icon="/icons/friends.png" title="Friends">
-	<Window class="container" title="Jealous much?">
-		<Label id="label">Hello, Friends</Label>
+	<Window class="container" title="Jealous much?" id="friendsWindow">
+	    <SearchBar id="search" barColor="#000" showCancel="true" height="43" top="0" />
 	</Window>
 	</Tab>
 </Alloy>
