@@ -3,16 +3,30 @@ var args = arguments[0] || {};
 $.journeyTime.text = args.journeyTime;
 $.journeyPoints.text = args.journeyDistance;
 $.journeyDistance.text = args.journeyDistance;
-function finishJourney () {
+function finishJourney() {
+	// TODO: It should return to home view
 	$.endJourney.close();
 }
 
-function shareFacebook () {
-	
+function shareFacebook() {
+
 }
 
-function shareTwitter () {
-	// https://gist.github.com/dawsontoth/00e95c5d95d2b7d5d027#L991
-	// http://developer.appcelerator.com/question/142880/post-a-tweet-from-iphone-app---stuck-on-callback-url
+function shareTwitter() {
+	// https://gist.github.com/dawsontoth/2eabc31db388144b3abc
+	var social = require('social');
+	var twitter = social.create({
+		site : 'Twitter',
+		consumerKey : Alloy.CFG.twitterConsumerKey,
+		consumerSecret : Alloy.CFG.twitterConsumerSecret
+	});
+	twitter.share({
+		message : 'Hello, world!',
+		success : function() {
+			alert('Tweeted!');
+		},
+		error : function(error) {
+			alert('Oh no! ' + error);
+		}
+	});
 }
-

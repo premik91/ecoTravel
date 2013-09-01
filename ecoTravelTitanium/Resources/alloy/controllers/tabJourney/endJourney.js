@@ -3,7 +3,23 @@ function Controller() {
         $.endJourney.close();
     }
     function shareFacebook() {}
-    function shareTwitter() {}
+    function shareTwitter() {
+        var social = require("social");
+        var twitter = social.create({
+            site: "Twitter",
+            consumerKey: Alloy.CFG.twitterConsumerKey,
+            consumerSecret: Alloy.CFG.twitterConsumerSecret
+        });
+        twitter.share({
+            message: "Hello, world!",
+            success: function() {
+                alert("Tweeted!");
+            },
+            error: function(error) {
+                alert("Oh no! " + error);
+            }
+        });
+    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "tabJourney/endJourney";
     arguments[0] ? arguments[0]["__parentSymbol"] : null;
