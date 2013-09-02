@@ -6,11 +6,11 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId19 = Ti.UI.createWindow({
+    $.__views.__alloyId16 = Ti.UI.createWindow({
         barColor: "#A2BF68",
         backgroundColor: "#E5E5E5",
         title: "My statistics",
-        id: "__alloyId19"
+        id: "__alloyId16"
     });
     $.__views.label = Ti.UI.createLabel({
         font: {
@@ -19,9 +19,9 @@ function Controller() {
         text: "Hello, Statistics",
         id: "label"
     });
-    $.__views.__alloyId19.add($.__views.label);
+    $.__views.__alloyId16.add($.__views.label);
     $.__views.tabStatistics = Ti.UI.createTab({
-        window: $.__views.__alloyId19,
+        window: $.__views.__alloyId16,
         id: "tabStatistics",
         icon: "/icons/statistics.png",
         title: "Statistics"

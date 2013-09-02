@@ -49,6 +49,7 @@
     <modules>
         <module platform="android">facebook</module>
         <module platform="iphone">facebook</module>
+    	<module platform="iphone">dk.napp.social</module> 
     </modules>
     <property name="ti.facebook.appid">551670011523207</property>
     <plugins>
