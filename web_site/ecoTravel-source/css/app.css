@@ -1,0 +1,355 @@
+/* app css stylesheet */
+
+      h1, h2, h3, h4, h5, h6 {
+		  color: #F0F0F0;
+		  opacity: 0.9;
+		  font-family: 'Bree Serif', Georgia, serif;
+		}
+      
+      i.icon {
+		  background-image: none;
+		  background-position: 0 0;
+		  background-repeat: repeat;
+		  display: inline;
+		  font-style: normal;
+		  font-weight: normal;
+		  height: auto;
+		  line-height: normal;
+		  margin-top: 0;
+		  text-decoration: inherit;
+		  vertical-align: baseline;
+		  width: auto;
+		}
+      
+      .center {
+      	text-align: center;
+      }
+      
+      body {
+        padding-top: 42px;
+        padding-bottom: 40px;
+        font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+      }
+            
+      body {
+		  color: #F0F0F0;
+		  font-size: 12px;
+		  line-height: 20px;
+		  background-color: rgb(229,229,229);
+		  overflow-y: scroll;
+		}
+
+      .navbar-inverse .navbar-inner {
+      	background-color: #a2bf68;	
+		background-image: -webkit-gradient(linear, left top, left bottom,
+                                    from(#a2bf68),
+                                    color-stop(49%, #91af57),
+                                    color-stop(50%, #89a84d),
+                                    to(#759739)
+                                    );
+                            background-image:
+                                -moz-linear-gradient(
+                                    center top,
+                                    rgb(162,191,104) 0%,
+                                    rgb(146,175,87) 49%,
+                                    rgb(138,168,77) 50%,
+                                    rgb(116,151,57) 100%
+                                );
+
+		opacity: 0.95;
+	}
+	
+.navbar .brand {
+  border-right: medium none;
+  color: #FFFFFF;
+  font-family: Bree Serif;
+  text-shadow: none;
+  font-weight: normal;
+}	
+	.navbar .brand small {
+		font-weight: normal;
+	}
+	
+	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+ 		 width: 961px;
+	}
+      
+      .top-gradient {
+      	height: 185px;
+background: rgb(147,206,222);
+background: -moz-linear-gradient(top,  rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(147,206,222,1)), color-stop(41%,rgba(117,189,209,1)), color-stop(100%,rgba(73,165,191,1)));
+background: -webkit-linear-gradient(top,  rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%);
+background: -o-linear-gradient(top,  rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%);
+background: -ms-linear-gradient(top,  rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%);
+background: linear-gradient(to bottom,  rgba(147,206,222,1) 0%,rgba(117,189,209,1) 41%,rgba(73,165,191,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=0 );
+
+
+box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2) inset;
+      }
+      
+.top-menu > [class*="span"] {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  height: 185px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: visible;
+  position: relative;
+  padding-left: 9px;
+  padding-right: 10px;
+}
+
+.top-menu .fullhref {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 5px;
+	display: block;
+	height: 180px;
+	outline: none;
+}
+
+.top-gradient [class*="span"] {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.top-menu [class*="span"].span-short {
+	height: 75px;
+}
+
+.top-menu [class*="span"].span-long {
+	height: 300px;
+}
+
+.top-menu [class*="span"].span-longer {
+	height: 400px;
+}
+
+.top-menu [class*="span"].span-infinite {
+	height: auto;
+}
+
+	
+.top-menu > [class*="span"]:last-child {
+	border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.top-gradient [class*="span"]:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+	
+.top-menu .active {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+}
+
+
+.top-menu h2 {
+	text-align: center;
+ 	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+	font-size: 70px;
+	color: rgba(142,185,42,1);
+}
+
+.top-gradient h3 {
+	text-align: center;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+	font-size: 30px;
+	font-weight: normal;
+	opacity: 1;
+	margin-top: 40px;
+}
+
+.bottom-gradient h3 {
+	color: #8EB92A;
+	margin: 0;
+	padding: 0;
+	text-shadow: none;
+	padding: 0 10px;
+	font-weight: normal;
+}
+
+	.top-menu [class*="span"] p {
+		padding: 0 10px;
+	}
+
+.top-gradient h2 {
+	color: #f0f0f0;
+	margin-top: 28px;
+}
+
+.top-gradient .active h2 {
+	color: #f0f0f0;
+	margin-top: 26px;
+}
+
+.bottom-gradient {
+background: rgb(229,229,229);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+
+color: #36302B;
+
+}
+
+.bottom-gradient > div > .row {
+  border-bottom: 1px solid rgba(58, 135, 173, 0.5);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+  
+.fullbtn {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  bottom: 38px;
+  color: rgba(255,255,255,0.8);
+  display: block;
+  left: 0;
+  padding: 3px 10px;
+  position: absolute;
+  text-decoration: none !important;
+  width: 100%;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}  
+
+.fullhref {
+	transition: box-shadow 0.2s ease-in;  
+	transition: background-color 0.2s ease-in;  	
+}
+
+.fullhref:hover .fullbtn {
+  background-color: rgba(153,191,62,0.8);
+  color: #36302B;
+}
+
+.top-menu .active .fullbtn {
+	bottom: 40px;
+}
+
+.fulldesc {
+  left: 0;
+  padding: 3px 10px;
+  position: absolute;
+  text-decoration: none !important;
+  width: 100%;
+  text-align: center;
+  -moz-box-sizing: border-box;
+	box-sizing: border-box;  
+  bottom: 6px; 
+  color: #fff;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.top-menu .active .fulldesc {
+	bottom: 8px;
+}
+
+
+.score-list li {
+	line-height: 20px;
+}
+
+.score-list li span {
+	float: right;
+	color: #8EB92A;
+	font-weight: bold;
+}
+
+.round-border {
+	border:  1px solid #666;
+	border-radius: 10px;
+}
+
+footer {
+	color: #333;
+}
+
+.nav-tabs.nav-stacked > li > a {
+  border: 1px solid #DDDDDD !important;
+  background-color: #f0f0f0;
+  text-shadow: none;
+  color: #3A3F44;
+}
+
+.nav-tabs.nav-stacked li > a:hover, .nav-tabs.nav-stacked .active > a, .nav-tabs.nav-stacked .active > a:hover {
+  background: -webkit-gradient(linear, left top, left bottom,
+                            from(#a2bf68),
+                            color-stop(49%, #91af57),
+                            color-stop(50%, #89a84d),
+                            to(#759739)
+                            );  
+	background-image:
+	    -moz-linear-gradient(
+	        center top,
+	        rgb(162,191,104) 0%,
+	        rgb(146,175,87) 49%,
+	        rgb(138,168,77) 50%,
+	        rgb(116,151,57) 100%
+	    );
+  color: #000;
+}
+
+.nav-tabs.nav-stacked li > a:hover span, .nav-tabs.nav-stacked .active > a span, .nav-tabs.nav-stacked .active > a:hover span {
+	color: #fff;
+}
+
+.user-summary {
+	position: relative;
+	top: -30px;
+}
+
+.user-summary-data {
+	line-height: 2em;
+}
+
+.white {
+	color:  #DDD;
+}
+
+.ti {
+		padding-left: 18px;
+		display: inline-block;
+		height: 16px;
+		line-height: 16px;
+		margin-right: 5px;
+		font-size: 10px;		
+}
+
+.ti-walk {
+	background: url("../img/icons/walk.png") center left no-repeat;	
+}
+.ti-bicycle {
+	background: url("../img/icons/bicycle.png") center left no-repeat;	
+}
+
+.ti-bike {
+	background: url("../img/icons/bike.png") center left no-repeat;	
+}
+
+.ti-bus {
+	background: url("../img/icons/bus.png") center left no-repeat;	
+}
+.ti-car {
+	background: url("../img/icons/car.png") center left no-repeat;	
+}
+.ti-train {
+	background: url("../img/icons/train.png") center left no-repeat;	
+}
+
+.popover {
+	max-width: 500px;
+}
+

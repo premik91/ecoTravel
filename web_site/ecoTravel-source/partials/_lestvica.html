@@ -1,0 +1,68 @@
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-short">
+      <h3>top <strong>all time</strong></h3>
+      <p>Kdo je največ prihranil ever?</p>
+    </div>
+    <div class="span6 span-short">
+      <h3>top <strong>dneva</strong></h3>
+      <p>Kdo je danes najbolj green?</p>
+    </div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-infinite">
+    	<p></p>
+			<ul class="score-list nav nav-tabs nav-stacked">
+				<li ng-repeat="user in lestvicaAllTime">
+					<a data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'" href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|g_to_kg|number:1}} kg</span></a>
+				</li>
+			</ul>
+			<small>Vrednost na lestvici predstavlja skupen prihranek glede na povprečen izpust CO<sub>2</sub>.</small>			
+	</div>
+    <div class="span6 span-infinite">
+		<p></p>
+		<ul class="score-list nav nav-tabs nav-stacked">
+			<li ng-repeat="user in lestvicaDaily">
+				<a data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'"  href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|g_to_kg|number:1}} kg</span></a>
+			</li>
+		</ul>
+		<small>Vrednost na lestvici predstavlja skupen prihranek glede na povprečen izpust CO<sub>2</sub>.</small>
+    </div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-short">
+      <h3>top <strong>tedna</strong></h3>
+      <p>Glavni akterji zadnjih 7 dni</p>
+    </div>
+    <div class="span6 span-short">
+      <h3>top <strong>meseca</strong></h3>
+      <p>Najbolj zeleni zadnjih 30 dni</p>
+    </div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-infinite">
+    	<p></p>
+		<ul class="score-list nav nav-tabs nav-stacked">
+			<li ng-repeat="user in lestvicaAllTime">
+				<a data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'"  href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|g_to_kg|number:1}} kg</span></a>
+			</li>
+		</ul>
+			<small>Vrednost na lestvici predstavlja skupen prihranek glede na povprečen izpust CO<sub>2</sub>.</small>
+	</div>
+    <div class="span6 span-infinite">
+		<p></p>
+		<ul class="score-list nav nav-tabs nav-stacked">
+			<li ng-repeat="user in lestvicaAllTime">
+				<a data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'"  href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|g_to_kg|number:1}} kg</span></a>
+			</li>
+		</ul>
+			<small>Vrednost na lestvici predstavlja skupen prihranek glede na povprečen izpust CO<sub>2</sub>.</small>		
+    </div>
+    </div>
+</div>

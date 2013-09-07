@@ -1,0 +1,51 @@
+<div class="row">
+  	<div class="container top-menu">
+	    <div class="span6 span-short">
+    	  <h3>kako sem ustvaril <strong>CO<sub>2</sub></strong></h3>
+	      <p>delež izpusta ogljikovega dioksida glede na vrsto prevoza</p>
+    	</div>
+		<div class="span6 span-short">
+    	  <h3>kako sem prihranil <strong>CO<sub>2</sub></strong></h3>
+		  <p>delež prihranjenega izpusta z alternativnimi načini potovanja</p>
+		</div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    	<div class="span6 span-longer">
+    	<p></p>
+			<awesomechart type="exploded pie" id='moja_poraba_co' width="460" height="350" data="travelStatsCO"></awesomechart>    
+		</div>
+	    <div class="span6 span-longer"><p></p>
+		  <awesomechart type="exploded pie" id='moj_prihranek' width="460" height="350" data="travelStatsSA"></awesomechart>
+      	</div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+		<div class="span6 span-short">
+		  <h3>koliko <strong>km</strong> sem prevozil</h3>
+		  <p>Statistika opravljenih km glede na vrsto prevoza</p>
+		</div>
+		<div class="span6 span-short">
+		  <h3>lestvica mojih <strong>prijateljev</strong></h3>
+		  <p>Kako zeleni so moji Facebook prijatelji</p>
+		</div>
+    </div>
+	</div>
+<div class="row">
+  	<div class="container top-menu">
+		<div class="span6 span-longer"><p></p>
+			<awesomechart type="exploded pie" id='moja_poraba_km' width="460" height="350" data="travelStatsKM"></awesomechart>
+		</div>
+		<div class="span6 span-longer">
+			<p></p>
+			<ul class="score-list nav nav-tabs nav-stacked">
+				<li ng-repeat="user in lestvicaFB">
+					<a  data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'" href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|g_to_kg|number:1}} kg</span></a>
+				</li>
+			</ul>
+			<small>Vrednost na lestvici predstavlja skupen prihranek glede na povprečen izpust CO<sub>2</sub>.</small>
+		</div>
+    </div>
+</div>

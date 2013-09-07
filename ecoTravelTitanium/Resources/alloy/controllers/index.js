@@ -16,28 +16,28 @@ function Controller() {
         id: "index",
         activeTabIconTint: "#3A87AD"
     });
-    $.__views.__alloyId2 = Alloy.createController("tabJourney/default", {
-        id: "__alloyId2"
-    });
-    $.__views.index.addTab($.__views.__alloyId2.getViewEx({
-        recurse: true
-    }));
-    $.__views.__alloyId3 = Alloy.createController("tabStatistics/default", {
-        id: "__alloyId3"
-    });
-    $.__views.index.addTab($.__views.__alloyId3.getViewEx({
-        recurse: true
-    }));
-    $.__views.__alloyId4 = Alloy.createController("tabFriends/default", {
-        id: "__alloyId4"
-    });
-    $.__views.index.addTab($.__views.__alloyId4.getViewEx({
-        recurse: true
-    }));
-    $.__views.__alloyId5 = Alloy.createController("tabSettings/default", {
+    $.__views.__alloyId5 = Alloy.createController("tabJourney/default", {
         id: "__alloyId5"
     });
     $.__views.index.addTab($.__views.__alloyId5.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId6 = Alloy.createController("tabStatistics/default", {
+        id: "__alloyId6"
+    });
+    $.__views.index.addTab($.__views.__alloyId6.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId7 = Alloy.createController("tabFriends/default", {
+        id: "__alloyId7"
+    });
+    $.__views.index.addTab($.__views.__alloyId7.getViewEx({
+        recurse: true
+    }));
+    $.__views.__alloyId8 = Alloy.createController("tabSettings/default", {
+        id: "__alloyId8"
+    });
+    $.__views.index.addTab($.__views.__alloyId8.getViewEx({
         recurse: true
     }));
     $.__views.index && $.addTopLevelView($.__views.index);
@@ -48,7 +48,7 @@ function Controller() {
     if (!Alloy.Globals.FBUser.checkFB()) {
         var FBwin = Alloy.createController("facebookLogin").getView();
         FBwin.open({
-            modal: false
+            modal: true
         });
     }
     __defers["$.__views.index!focus!tabFocus"] && $.__views.index.addEventListener("focus", tabFocus);

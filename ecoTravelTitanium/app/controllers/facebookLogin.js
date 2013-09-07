@@ -4,13 +4,13 @@ Alloy.Globals.FBUser.fbModule.addEventListener('login', function(e) {
     } else if (e.error) {
         alert(e.error);
     } else if (e.cancelled) {
-        alert("Canceled");
+        alert(e.cancelled);
     }
 });
 
 function doPrijaviFB() {
 	Alloy.Globals.FBUser.loginToServer(function() {
-		Ti.API.info("Callback za prijavo ratal!");
+		Ti.API.info('Callback za prijavo ratal!');
 	});
 	$.FBWin.close();
 	return true;

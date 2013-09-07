@@ -1,7 +1,21 @@
 <Alloy>
-	<Tab id="tabFriends" icon="/icons/friends.png" title="Friends">
-	<Window class="container" title="Jealous much?" id="friendsWindow">
-	    <SearchBar id="search" barColor="#000" showCancel="true" height="43" top="0" />
-	</Window>
+	<Tab id="tabFriends" icon="/icons/friends.png" title="Friends" onFocus="onFocus">
+		<Window navBarHidden="true">
+		<NavigationGroup id="friendsNav">
+			<Window class="container" title="Competitive much?" id="friendsWindow">
+				<SearchBar id="search" barColor="#000" showCancel="false" height="48" top="0" hintText="Search for a friend" />
+				<ListView id="listView" defaultItemTemplate="template" top="48" onItemclick="friendShow">
+					<Templates>
+						<ItemTemplate name="template">
+							<ImageView bindId="pic" id="icon" />
+							<Label bindId="name" id="title" />
+							<Label bindId="info" id="subtitle"/>
+						</ItemTemplate>
+					</Templates>
+					<ListSection id="friendsList"></ListSection>
+				</ListView>
+			</Window>
+		</NavigationGroup>>
+		</Window>
 	</Tab>
 </Alloy>

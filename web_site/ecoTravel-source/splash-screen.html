@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="ecoTravel">
+<head>
+  <title>ecoTravel - zmanjšaj svoj ogljični odtis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf8">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/slate/bootstrap.min.css" rel="stylesheet">	    
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/app.css"/>  
+</head>
+
+  <body style="margin-top: 0; padding-top: 0;">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="margin-top: -43px;">
+      <div class="navbar-inner" style="height: 0; padding: 0; margin: 0;box-shadow: 0 10px 10px rgba(0,0,0,0.3);">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#/" active-link="active"><i class="icon icon-leaf icon-white" style="color: #3A87AD;"></i>&nbsp;&nbsp;<strong>eco</strong>Travel</a>
+          	<div class="pull-right">
+            <div class="brand">
+              <small>Pravkar <span class="badge badge-info">200</span> oseb sledi svojemu ogljičnemu odtisu.</small>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-gradient" style="height: 960px;">
+      <!-- Example row of columns -->
+      <div class="row">
+      	<div class="container top-menu">
+        <div class="span2" style="width: 640px; -moz-box-sizing: border-box; height: 960px; -moz-box-sizing: border-box;">
+	      <a href="#/mobilna-aplikacija" class="fullhref" style="height: 960px">                
+	          <h2 style="font-size: 380px; margin-top: 120px !important;"><i class="icon icon-leaf icon-white"></i></h2>
+    	      <span class="fullbtn"  style="background-color: rgba(153, 191, 62, 0.8);
+    	          color: #36302B; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;font-family: Bree Serif ;bottom: 220px;font-size: 90px; height: auto !important; line-height: 1.5em;"><strong>eco</strong>Travel</span>
+       		 <span class="fulldesc" style="font-family: Open Sans; margin-bottom: 60px; font-size: 30px;">sledi svojemu ogljičnemu odtisu</span>          
+       	</a>
+        </div>        
+        </div>
+      </div>
+
+    </div> <!-- /top-gradient -->
+    <div class="bottom-gradient">
+        <div ng-view></div>
+    </div>
+	
+		<script src="lib/jquery-1.8.0.min.js"></script>
+		<script src="https://raw.github.com/cyberpython/AwesomeChartJS/master/awesomechart.js"></script>		
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="http://twitter.github.com/bootstrap/assets/js/holder/holder.js"></script>		
+  </body>
+</html>

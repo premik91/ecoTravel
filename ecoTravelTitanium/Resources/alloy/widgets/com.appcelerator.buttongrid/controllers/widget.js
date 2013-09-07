@@ -31,8 +31,14 @@ function Controller() {
     var defaults = {
         buttonWidth: 50,
         buttonHeight: 75,
+        realButtonWidth: 40,
+        realButtonHeight: 65,
         textSize: TEXTSIZE + "dp",
+        textFont: "Helvetica",
+        textSubSize: TEXTSIZE + "dp",
+        textSubFont: "Helvetica",
         textColor: "white",
+        textSubColor: "white",
         textSelectedColor: "black",
         assetDir: "/images/"
     };
@@ -49,12 +55,21 @@ function Controller() {
                 backgroundImage: $._params.assetDir + button.id + ".png",
                 backgroundColor: $._params.backgroundColor || "transparent",
                 backgroundSelectedColor: $._params.backgroundSelectedColor || "transparent",
-                width: $._params.buttonWidth,
-                height: $._params.buttonHeight,
-                click: $._params.click
+                width: $._params.realButtonWidth,
+                height: $._params.realButtonHeight,
+                click: $._params.click,
+                top: 30,
+                transportTitle: button.title
             });
-            $._buttons[index].b = Ti.UI.createButton(buttonProps);
-            button.click && $._buttons[index].b.addEventListener("click", function(e) {
+            $._buttons[index].b = Titanium.UI.createView({
+                borderColor: "#C8C8C8",
+                backgroundColor: "transparent",
+                width: $._params.buttonWidth,
+                height: $._params.buttonHeight
+            });
+            var btn = Ti.UI.createButton(buttonProps);
+            $._buttons[index].b.add(btn);
+            btn.click && btn.addEventListener("click", function(e) {
                 var source = _.clone(e.source);
                 var temp = e.source;
                 source.title = e.source.title || e.source._title;
@@ -69,17 +84,34 @@ function Controller() {
                     backgroundColor: "transparent",
                     width: $._params.buttonWidth,
                     height: Ti.UI.SIZE,
-                    bottom: TEXTSIZE / (button.title.split("\n").length - 1 ? 2 : 1) + "dp",
+                    top: 3,
                     font: {
-                        fontSize: $._params.textSize
+                        fontSize: $._params.textSize,
+                        fontFamily: $._params.textFont
                     },
                     text: button.title,
                     textAlign: "center",
                     touchEnabled: false
                 });
                 $._buttons[index].b.add(theLabel);
-                $._buttons[index].b._title = $._buttons[index].b.title;
-                $._buttons[index].b.title = "";
+                btn.title = "";
+            }
+            if (true && button.subtitle) {
+                var theSubLabel = Ti.UI.createLabel({
+                    color: $._params.textSubColor,
+                    backgroundColor: "transparent",
+                    width: $._params.buttonWidth,
+                    height: Ti.UI.SIZE,
+                    bottom: 3,
+                    font: {
+                        fontSize: $._params.textSubSize,
+                        fontFamily: $._params.textSubFont
+                    },
+                    text: button.subtitle,
+                    textAlign: "center",
+                    touchEnabled: false
+                });
+                $._buttons[index].b.add(theSubLabel);
             }
         });
         var autoLayout = $._params.autoLayout || "undefined" == typeof $._params.autoLayout;

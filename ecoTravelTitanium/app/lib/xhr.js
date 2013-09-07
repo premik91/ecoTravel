@@ -12,6 +12,11 @@ XHR = function(){
 	
 };
 
+// Create the HTTP connection
+	var xhr = Titanium.Network.createHTTPClient({
+		enableKeepAlive: false
+	});
+
 // Public functions
 // ================
 
@@ -38,9 +43,9 @@ XHR.prototype.get = function(url, onSuccess, onError, extraParams) {
 	if (!extraParams.ttl || cache == 0) {
 		
 		// Create the HTTP connection
-		var xhr = Titanium.Network.createHTTPClient({
+	/*	var xhr = Titanium.Network.createHTTPClient({
 			enableKeepAlive: false
-		});
+	}); */
 		// Create the result object
 		var result = {};
 	
@@ -96,7 +101,7 @@ XHR.prototype.get = function(url, onSuccess, onError, extraParams) {
 XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	
 	// Debug
-	Titanium.API.info(url + " " + JSON.stringify(data));
+	//Titanium.API.info(url + " " + JSON.stringify(data));
 	
 	// Create some default params
 	var onSuccess = onSuccess || function(){};
@@ -105,11 +110,7 @@ XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	extraParams.async = extraParams.async || true;
 	extraParams.shouldAuthenticate = extraParams.shouldAuthenticate || false; // if you set this to true, pass "username" and "password" as well
 	extraParams.contentType = extraParams.contentType || "application/json";
-	
-	// Create the HTTP connection
-	var xhr = Titanium.Network.createHTTPClient({
-		enableKeepAlive: false
-	});
+		
 	// Create the result object
 	var result = {};
 	
@@ -126,6 +127,7 @@ XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	// When the connection was successful
 	xhr.onload = function() {
 		// Check the status of this
+		Ti.API.info("Called xhr.onload with status " + xhr.status);
 		result.status = xhr.status == 200 ? "ok" : xhr.status;
 		result.data = xhr.responseText;
 		
@@ -135,6 +137,7 @@ XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	// When there was an error
 	xhr.onerror = function(e) {
 		// Check the status of this		
+		Ti.API.info("Called xhr.onerror with status " + xhr.status);		
 		result.status = "error";
 		result.data = e.error;
 		result.code = xhr.status;
@@ -160,9 +163,9 @@ XHR.prototype.put = function(url, data, onSuccess, onError, extraParams) {
 	extraParams.contentType = extraParams.contentType || "application/json";
 	
 	// Create the HTTP connection
-	var xhr = Titanium.Network.createHTTPClient({
+	/*var xhr = Titanium.Network.createHTTPClient({
 		enableKeepAlive: false
-	});
+	});*/
 	// Create the result object
 	var result = {};
 	
@@ -212,9 +215,9 @@ XHR.prototype.destroy = function(url, onSuccess, onError, extraParams) {
 	extraParams.contentType = extraParams.contentType || "application/json";
 	
 	// Create the HTTP connection
-	var xhr = Titanium.Network.createHTTPClient({
+	/*var xhr = Titanium.Network.createHTTPClient({
 		enableKeepAlive: false
-	});
+	});*/
 	// Create the result object
 	var result = {};
 	

@@ -26,7 +26,7 @@ function Controller() {
                 };
                 $.mapview.setLocation(region);
                 var position = '{"x":' + current_latitude + ',"y":' + current_longitude + ',"speed":' + e.coords.speed + ',"time":' + e.coords.timestamp + ',"km":' + new_distance + "},";
-                Ti.App.Properties.setString("positions", Ti.App.Properties.getString("positions") + position);
+                Ti.App.Properties.setString("jsonBatch", Ti.App.Properties.getString("jsonBatch") + position);
                 last_position_latitude = current_latitude;
                 last_position_longitude = current_longitude;
             }
@@ -44,15 +44,16 @@ function Controller() {
     }
     function sendData() {
         if (true == Ti.Network.online) {
-            var data = Ti.App.Properties.getString("positions");
-            Ti.App.Properties.setString("positions", "");
+            var data = Ti.App.Properties.getString("jsonBatch");
+            Ti.App.Properties.setString("jsonBatch", "");
             if ("" == data) return;
             var json_data = "[" + data.slice(0, -1) + "]";
             Alloy.Globals.XHR.post(Alloy.CFG.site_batch_url, json_data, function() {
                 Ti.API.info("Data sent: " + json_data);
-            }, function() {
-                Ti.App.Properties.setString("positions", data + Ti.App.Properties.getString("positions"));
+            }, function(e) {
+                Ti.App.Properties.setString("jsonBatch", data + Ti.App.Properties.getString("jsonBatch"));
                 Ti.API.error("Data not send" + json_data);
+                Ti.API.error(e);
             });
         }
     }
@@ -74,8 +75,11 @@ function Controller() {
     }
     function endJourney() {
         clearInterval(send_data_interval);
+        var end_journey_json = '{ "journey": "Stop" },';
+        Ti.App.Properties.setString("jsonBatch", Ti.App.Properties.getString("jsonBatch") + end_journey_json);
+        sendData();
         var endJourney = Alloy.createController("tabJourney/endJourney", {
-            vehicleType: args.vehicleType,
+            transportType: args.transportType,
             journeyTime: $.journeyTime.text,
             journeyDistance: $.journeyDistance.text
         }).getView();
@@ -83,6 +87,9 @@ function Controller() {
             modal: true,
             modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
         });
+        endJourney.addEventListener("close", closeJourneyProgress);
+    }
+    function closeJourneyProgress() {
         $.journeyProgress.close();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -101,12 +108,12 @@ function Controller() {
         layout: "vertical"
     });
     $.__views.journeyProgress && $.addTopLevelView($.__views.journeyProgress);
-    $.__views.__alloyId10 = Ti.UI.createView({
+    $.__views.__alloyId25 = Ti.UI.createView({
         layout: "vertical",
         height: "88%",
-        id: "__alloyId10"
+        id: "__alloyId25"
     });
-    $.__views.journeyProgress.add($.__views.__alloyId10);
+    $.__views.journeyProgress.add($.__views.__alloyId25);
     $.__views.journeyTime = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -114,7 +121,7 @@ function Controller() {
         text: "00:00:00",
         id: "journeyTime"
     });
-    $.__views.__alloyId10.add($.__views.journeyTime);
+    $.__views.__alloyId25.add($.__views.journeyTime);
     $.__views.journeyDistance = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -122,10 +129,10 @@ function Controller() {
         text: "0 meters",
         id: "journeyDistance"
     });
-    $.__views.__alloyId10.add($.__views.journeyDistance);
-    var __alloyId11 = [];
+    $.__views.__alloyId25.add($.__views.journeyDistance);
+    var __alloyId26 = [];
     $.__views.mapview = Ti.Map.createView({
-        annotations: __alloyId11,
+        annotations: __alloyId26,
         id: "mapview",
         ns: Ti.Map,
         animate: "true",
@@ -133,35 +140,38 @@ function Controller() {
         userLocation: "true",
         mapType: Ti.Map.STANDARD_TYPE
     });
-    $.__views.__alloyId10.add($.__views.mapview);
-    $.__views.__alloyId12 = Ti.UI.createView({
+    $.__views.__alloyId25.add($.__views.mapview);
+    $.__views.__alloyId27 = Ti.UI.createView({
         layout: "horizontal",
         height: "12%",
-        id: "__alloyId12"
+        id: "__alloyId27"
     });
-    $.__views.journeyProgress.add($.__views.__alloyId12);
-    $.__views.__alloyId13 = Ti.UI.createButton({
+    $.__views.journeyProgress.add($.__views.__alloyId27);
+    $.__views.__alloyId28 = Ti.UI.createButton({
         title: "End journey",
         left: "10",
         right: "10",
         top: "5",
         bottom: "5",
         width: Titanium.UI.FILL,
-        id: "__alloyId13"
+        id: "__alloyId28"
     });
-    $.__views.__alloyId12.add($.__views.__alloyId13);
-    endJourney ? $.__views.__alloyId13.addEventListener("click", endJourney) : __defers["$.__views.__alloyId13!click!endJourney"] = true;
+    $.__views.__alloyId27.add($.__views.__alloyId28);
+    endJourney ? $.__views.__alloyId28.addEventListener("click", endJourney) : __defers["$.__views.__alloyId28!click!endJourney"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
+    Ti.App.Properties.setString("jsonBatch", "");
     var args = arguments[0] || {};
-    null == Ti.App.Properties.getString("positions") && Ti.App.Properties.setString("positions", "");
+    null == Ti.App.Properties.getString("jsonBatch") && Ti.App.Properties.setString("jsonBatch", "");
+    var start_journey_json = '{"journey": "' + args.transportType["transportTitle"] + '"},';
+    Ti.App.Properties.setString("jsonBatch", Ti.App.Properties.getString("jsonBatch") + start_journey_json);
     startFollow();
     var send_data_interval = setInterval(sendData, 1e3 * Alloy.CFG.send_data_seconds);
     var last_position_latitude, last_position_longitude;
     var distance = 0;
     var distance_in_meters = true;
     var milliseconds = 0, seconds = 0, minutes = 0, hours = 0;
-    __defers["$.__views.__alloyId13!click!endJourney"] && $.__views.__alloyId13.addEventListener("click", endJourney);
+    __defers["$.__views.__alloyId28!click!endJourney"] && $.__views.__alloyId28.addEventListener("click", endJourney);
     _.extend($, exports);
 }
 

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" ng-app="ecoTravel">
+<head>
+  <title>ecoTravel - zmanjšaj svoj ogljični odtis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf8">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/slate/bootstrap.min.css" rel="stylesheet">	
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/app.css"/>  
+</head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner" style="box-shadow: 0 10px 10px rgba(0,0,0,0.3);">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#/" active-link="active"><i class="icon icon-leaf icon-white" style="color: #3A87AD;"></i>&nbsp;&nbsp;<strong>eco</strong>Travel</a>       
+          	<div class="pull-right">
+            <div class="brand" ng-controller="UserCountCtrl">
+              <small>Že <span class="badge badge-info" ng-bind="userCount">0</span> oseb<span ng-show="Facebook.getAppUserID()">, od tega <span class="badge badge-success" ng-bind="friendsCount"></span> prijateljev</span> sledi svojemu ogljičnemu odtisu.</small>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-gradient">
+      <!-- Example row of columns -->
+      <div class="row">
+      	<div class="container top-menu">
+        <div class="span4">
+        	<div ng-show="Facebook.getLoginStatus()" style="display: none;">
+        	<div ng-show="!Facebook.getAuth()" >
+		          <h3><strong>Moj</strong> odtis</h3>
+    		      <p class="center"><a ng-click="Facebook.checkLogin();" class="btn btn-primary" href=""><i class="icon icon-facebook" style="color: #3A87AD"></i>&nbsp;&nbsp;Prijavi se &raquo;</a></p>
+    		</div>
+	        <div ng-show="Facebook.getAuth()" class="user-summary">
+        	    <h3 ng-bind="Facebook.getUser().name"></h3>
+    		      <p class="center user-summary-data">
+    		      	Ustvaril sem <span class="label label-important" ng-bind="Facebook.getAppUserStats().total|g_to_kg|number:1|suffix:' kg'">kg</span> CO<sub>2</sub>
+    		      	<br />
+    		      	Prihranil sem <span class="label label-success" ng-bind="Facebook.getAppUserStats().saved|g_to_kg|number:1|suffix:' kg'">kg</span> CO<sub>2</sub>
+    		      	<br />
+    		      	Prepotoval sem <span class="label label-info" ng-bind="Facebook.getAppUserStats().km|number:0|suffix:' km'"></span>
+    		      </p>
+    		      <p class="center">
+    		      <a class="btn btn-mini btn-success" href="#/moja-poraba"><i class="icon icon-graph" style="color: #3A87AD"></i>&nbsp;&nbsp;Moje vožnje &raquo;</a>
+    		      <a ng-click="Facebook.logout();" class="btn btn-mini btn-alert" href=""><i class="icon icon-user" style="color: #3A87AD"></i>&nbsp;&nbsp;Odjava</a></p>
+	        </div>
+	        </div>
+        </div>        
+        <div class="span2">
+          <a href="#/statistika" class="fullhref" active-link="active">
+	          <h2><i class="icon icon-bar-chart icon-white"></i></h2>
+    	      <span class="fullbtn">Statistika</span>
+        	  <span class="fulldesc">Lahko smo še boljši</span>
+        	  </a>
+       </div>
+        <div class="span2">
+	      <a href="#/lestvica" class="fullhref" active-link="active">
+          	<h2><i class="icon icon-flag icon-white"></i></h2>
+            <span class="fullbtn">Lestvice</span>
+            <span class="fulldesc">Top lestvice popotnikov</span>
+		</a>
+        </div>
+        <div class="span2">
+	      <a href="#/ogljicni-odtis" class="fullhref" active-link="active">        
+			<h2><i class="icon icon-lightbulb icon-white"></i></h2>
+	       	<span class="fullbtn">Ogljični odtis</span>
+       	 	<span class="fulldesc">Bodi osveščen</span>
+       	 </a>
+        </div>
+        <div class="span2">
+	      <a href="#/mobilna-aplikacija" class="fullhref" active-link="active">                
+	          <h2><i class="icon icon-leaf icon-white"></i></h2>
+    	      <span class="fullbtn">Mobilna aplikacija</span>
+       		 <span class="fulldesc">Začni tekmovati</span>          
+       	</a>
+        </div>        
+        </div>
+      </div>
+
+    </div> <!-- /top-gradient -->
+    <div class="bottom-gradient">
+        <div ng-view></div>
+    </div>
+
+	<footer class="row">
+	  <div class="container"><br />ecoTravel v<span app-version></span></div>
+	</footer>
+	<div id="fb-root"></div>	
+		<script src="lib/jquery-1.8.0.min.js"></script>	
+		<script src="lib/angular-1.0.5/angular.js"></script>
+		<script src="lib/angular-1.0.5/i18n/angular-locale_sl-si.js"></script>		
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/filters.js"></script>
+		<script src="js/directives.js"></script>
+		<script src="https://raw.github.com/cyberpython/AwesomeChartJS/master/awesomechart.js"></script>		
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>		
+		<!-- script src="lib/ui-bootstrap-custom-tpls-0.3.0-SNAPSHOT.js"></script -->
+		<script src="lib/angular-strap.js"></script>						
+
+		<script src="http://twitter.github.com/bootstrap/assets/js/holder/holder.js"></script>		
+  </body>
+</html>

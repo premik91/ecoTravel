@@ -58,8 +58,61 @@ module.exports = [ {
         }
     }
 }, {
+    isClass: true,
+    priority: 10000.001,
+    key: "userImage",
+    style: {
+        width: "100dp",
+        height: "100dp",
+        left: 0
+    }
+}, {
+    isClass: true,
+    priority: 10000.0011,
+    key: "labelUser",
+    style: {
+        left: "100dp"
+    }
+}, {
+    isId: true,
+    priority: 100000.0007,
+    key: "icon",
+    style: {
+        width: "50dp",
+        height: "50dp",
+        left: 0
+    }
+}, {
+    isId: true,
+    priority: 100000.0008,
+    key: "title",
+    style: {
+        color: "black",
+        font: {
+            fontFamily: "Arial",
+            fontSize: "16dp",
+            fontWeight: "bold"
+        },
+        left: "60dp",
+        top: 0,
+        height: "20"
+    }
+}, {
     isId: true,
     priority: 100000.0009,
+    key: "subtitle",
+    style: {
+        color: "gray",
+        font: {
+            fontFamily: "Arial",
+            fontSize: "14dp"
+        },
+        left: "60dp",
+        top: "25dp"
+    }
+}, {
+    isId: true,
+    priority: 100000.0014,
     key: "scrollview",
     style: {
         left: 0,

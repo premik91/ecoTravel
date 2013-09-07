@@ -1,7 +1,14 @@
 <Alloy>
-	<Tab id="tabStatistics" icon="/icons/statistics.png" title="Statistics">	
-	<Window class="container" title="My statistics">
-		<Label id="label">Hello, Statistics</Label>
+	<Tab id="tabStatistics" icon="/icons/statistics.png" title="Statistics" onFocus="onFocus">	
+	<Window class="container" title="My statistics" layout="vertical">
+		<View layout="composite" id="mainView" height="100"> 
+			<ImageView image="images/user.png" class="userImage"></ImageView>
+			<Label id="name" class="labelUser" top="20"></Label>
+			<Label id="points" class="labelUser" top="40"></Label>
+			<Label id="distance" class="labelUser" top="60"></Label>
+			<Label id="co2saved" class="labelUser" top="80"></Label>
+		</View>
+		<TableView id="tableView"></TableView>
 	</Window>
 	</Tab>
 </Alloy>

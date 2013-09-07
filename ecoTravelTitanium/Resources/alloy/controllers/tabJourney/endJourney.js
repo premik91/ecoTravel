@@ -24,14 +24,14 @@ function Controller() {
         id: "mainView"
     });
     $.__views.endJourney.add($.__views.mainView);
-    $.__views.__alloyId7 = Ti.UI.createLabel({
+    $.__views.__alloyId22 = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
         },
         text: "Journey statistics",
-        id: "__alloyId7"
+        id: "__alloyId22"
     });
-    $.__views.mainView.add($.__views.__alloyId7);
+    $.__views.mainView.add($.__views.__alloyId22);
     $.__views.journeyTime = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
@@ -53,23 +53,23 @@ function Controller() {
         id: "journeyDistance"
     });
     $.__views.mainView.add($.__views.journeyDistance);
-    $.__views.__alloyId8 = Ti.UI.createView({
+    $.__views.__alloyId23 = Ti.UI.createView({
         layout: "horizontal",
         height: "12%",
-        id: "__alloyId8"
+        id: "__alloyId23"
     });
-    $.__views.endJourney.add($.__views.__alloyId8);
-    $.__views.__alloyId9 = Ti.UI.createButton({
+    $.__views.endJourney.add($.__views.__alloyId23);
+    $.__views.__alloyId24 = Ti.UI.createButton({
         title: "Finish journey",
         left: "10",
         right: "10",
         top: "5",
         bottom: "5",
         width: Titanium.UI.FILL,
-        id: "__alloyId9"
+        id: "__alloyId24"
     });
-    $.__views.__alloyId8.add($.__views.__alloyId9);
-    finishJourney ? $.__views.__alloyId9.addEventListener("click", finishJourney) : __defers["$.__views.__alloyId9!click!finishJourney"] = true;
+    $.__views.__alloyId23.add($.__views.__alloyId24);
+    finishJourney ? $.__views.__alloyId24.addEventListener("click", finishJourney) : __defers["$.__views.__alloyId24!click!finishJourney"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     var args = arguments[0] || {};
@@ -98,21 +98,12 @@ function Controller() {
     }
     shareBtn.addEventListener("click", function() {
         Social.isActivityViewSupported() && Social.activityView({
-            text: "share like a king!",
+            text: "Share",
             image: "images/pin.png",
-            removeIcons: "print,sms,copy,contact,camera,weibo"
-        }, [ {
-            title: "Open in Safari",
-            type: "images/open.safari",
-            image: "images/safari.png"
-        } ]);
+            removeIcons: "print,sms,contact,camera,weibo"
+        });
     });
-    Social.addEventListener("customActivity", function(e) {
-        setTimeout(function() {
-            "Open in Safari" == e.title && Ti.Platform.openURL("http://www.google.com");
-        }, 500);
-    });
-    __defers["$.__views.__alloyId9!click!finishJourney"] && $.__views.__alloyId9.addEventListener("click", finishJourney);
+    __defers["$.__views.__alloyId24!click!finishJourney"] && $.__views.__alloyId24.addEventListener("click", finishJourney);
     _.extend($, exports);
 }
 

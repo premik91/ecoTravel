@@ -5,10 +5,10 @@ function Controller() {
             return false;
         }
         var startJourney = Alloy.createController("tabJourney/journeyProgress", {
-            vehicleType: e.source
+            transportType: e.source
         }).getView();
         startJourney.open({
-            modal: true,
+            modal: false,
             modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
         });
     }
@@ -19,19 +19,30 @@ function Controller() {
     arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    $.__views.__alloyId6 = Ti.UI.createWindow({
+    $.__views.__alloyId20 = Ti.UI.createWindow({
         barColor: "#A2BF68",
         backgroundColor: "#E5E5E5",
         title: "Start new journey",
-        id: "__alloyId6"
+        layout: "composite",
+        id: "__alloyId20"
     });
     $.__views.buttongrid = Alloy.createWidget("com.appcelerator.buttongrid", "widget", {
         id: "buttongrid",
-        __parentSymbol: $.__views.__alloyId6
+        top: "0",
+        __parentSymbol: $.__views.__alloyId20
     });
-    $.__views.buttongrid.setParent($.__views.__alloyId6);
+    $.__views.buttongrid.setParent($.__views.__alloyId20);
+    $.__views.__alloyId21 = Ti.UI.createLabel({
+        font: {
+            fontFamily: "Open Sans"
+        },
+        text: "Tap on a transport mode to start new journey!",
+        bottom: "3",
+        id: "__alloyId21"
+    });
+    $.__views.__alloyId20.add($.__views.__alloyId21);
     $.__views.tabJourney = Ti.UI.createTab({
-        window: $.__views.__alloyId6,
+        window: $.__views.__alloyId20,
         id: "tabJourney",
         icon: "/icons/journey.png",
         title: "Journey"
@@ -43,36 +54,51 @@ function Controller() {
         buttons: [ {
             id: "buttonWalk",
             title: "Walk",
+            subtitle: "walking, running, jogging",
             backgroundImage: "images/transports/walk.png",
             click: _.bind(buttonClick, this)
         }, {
             id: "buttonBicycle",
             title: "Bicycle",
+            subtitle: "bicycle, skate, rollerblade",
             backgroundImage: "images/transports/bicycle.png",
             click: _.bind(buttonClick, this)
         }, {
             id: "buttonBux",
             title: "Bus",
+            subtitle: "bus, tram",
             backgroundImage: "images/transports/bus.png",
             click: _.bind(buttonClick, this)
         }, {
             id: "buttonTrain",
             title: "Train",
+            subtitle: "train, underground",
             backgroundImage: "images/transports/train.png",
             click: _.bind(buttonClick, this)
         }, {
             id: "buttonCar",
             title: "Car",
+            subtitle: "car, taxi",
             backgroundImage: "images/transports/car.png",
             click: _.bind(buttonClick, this)
         }, {
             id: "buttonBike",
             title: "Bike",
+            subtitle: "bike, motor bike",
             backgroundImage: "images/transports/bike.png",
             click: _.bind(buttonClick, this)
         } ],
-        buttonWidth: 110,
-        buttonHeight: 110
+        buttonWidth: 160,
+        buttonHeight: 114,
+        realButtonWidth: 60,
+        realButtonHeight: 60,
+        duration: 1,
+        textColor: "#8EB92A",
+        textSize: Alloy.CFG.defaultFontSize + 1,
+        textFont: "Bree Serif",
+        textSubSize: Alloy.CFG.defaultFontSize - 2,
+        textSubFont: "Open Sans",
+        textSubColor: "#3A3F44"
     });
     _.extend($, exports);
 }

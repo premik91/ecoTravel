@@ -1,0 +1,60 @@
+<div class="row">
+  	<div class="container top-menu">
+	<div class="span6 span-short">
+	  <h3>statistika <strong>prihrankov</strong></h3>
+	  <p>Skupaj smo prihranili <strong>{{totalSA|number}} kg CO<sub>2</sub></strong>.</p>
+	</div>
+	<div class="span6 span-short">
+	  <h3>statistika <strong>izpusta</strong></h3>
+	  <p>Skupaj smo ustvarili <strong>{{totalCO|number}} kg CO<sub>2</sub></strong>.</p>
+	</div>
+	
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-longer">
+    	<p></p>
+	  <awesomechart type="pareto" id='statSAChart' width="460" height="350" data="statBySA"></awesomechart>
+	  <br /><small>Linija označuje skupen prihranek CO<sub>2</sub> vseh predhodnih tipov prevoza.</small>
+      </div>
+<div class="span6 span-longer">
+	<p></p>
+	  <awesomechart type="pareto" id='statPorabaChart' width="460" height="350" data="statByCO"></awesomechart>
+  	<br /><small>Linija označuje skupen izpust CO<sub>2</sub> vseh predhodnih tipov prevoza.</small>
+  	</div>
+      
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+	<div class="span6 span-short">
+	  <h3>statistika <strong>potovanj</strong></h3>
+	  <p>Skupaj smo naredili <strong>{{totalKM|number}} km</strong>.</p>
+	</div>
+	<div class="span6 span-short">
+	  <h3>statistika <strong>poti</strong></h3>
+	  <p>Koliko izpusta CO<sub>2</sub> smo naredili v povprečnem potovanju?</p>
+	</div>
+	
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span6 span-longer">
+    	<p></p>
+	  <awesomechart type="pareto" id='statKM1Chart' width="460" height="350" data="statByKM"></awesomechart>
+	  <br /><small>Linija označuje skupno število km vseh predhodnih tipov prevoza.</small>
+      </div>
+<div class="span6 span-longer">
+<p></p>
+	<ul class="score-list nav nav-tabs nav-stacked">
+		<li ng-repeat="type in statByType">
+			<a href="">{{$index+1}}. {{type.name}} ({{type.number}} poti) <span>{{type.avg|number:0}} g</span></a>
+		</li>
+	</ul>
+	  <br /><small>Vrednost na lestvici prikazuje izpust CO<sub>2</sub> na povprečni poti z izbranim načinom potovanja.</small>	
+  	</div>
+      
+    </div>
+</div>

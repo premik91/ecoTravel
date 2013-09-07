@@ -10,4 +10,10 @@ Alloy.Globals.FBUser = require("FacebookUser");
 
 Alloy.Globals.XHR = new (require("xhr"))();
 
+Alloy.Globals.CLS = require("customListSearch");
+
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
 Alloy.createController("index");

@@ -1,0 +1,10 @@
+-change friends JSON to match user JSON (make both the same) and add facebook id
+["name": "Rok Kralj","facebookID": "FACEBOOK_ID", "total": 311.0021136042848, ....
+
+-all returned integers to .2 fixed decimal point => 2.0902328983200 -> 2.09
+
+-fix top lestvice
+
+-add two fields to user database:
+	friends_only: boolean (default: false)
+	public: boolean (default: true)

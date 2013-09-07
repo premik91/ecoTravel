@@ -1,7 +1,9 @@
 module.exports = {
     defaultFontSize: 13,
     dependencies: {
-        "com.appcelerator.buttongrid": "1.0"
+        "com.appcelerator.buttongrid": "1.0",
+        "nl.fokkezb.pullToRefresh": "1.4",
+        "ti.pedro.forms": "1.0"
     },
     site_url: "http://78.47.47.172:8080/",
     site_batch_url: "http://78.47.47.172:8080/trip/batch/",

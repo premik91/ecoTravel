@@ -1,0 +1,39 @@
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span3 span-short">
+      <h3><strong>eco</strong>travel</h3>
+      <p>Kaj in zakaj je ecoTravel?</p>
+    </div>
+    <div class="span4 span-short">
+      <h3>izpusti in <strong>prihranki</strong></h3>
+      <p>Koliko CO<sub>2</sub> smo že skupaj porabili in prihranili?</p>
+   </div>
+    <div class="span5 span-short">
+      <h3><strong>top</strong> 5 varčevalcev na lestvici</h3>
+      <p>Kdo se je do sedaj najbolj odmaknil od povprečja?</p>
+    </div>
+    </div>
+</div>
+<div class="row">
+  	<div class="container top-menu">
+    <div class="span3 span-long">
+    	<p></p>
+      <p>Povprečen Slovenec letno pridela okrog <strong>10 ton ogljikovega dioksida</strong>. Dobršen del le-tega proizvedemo z različnimi prevoznimi sredstvi: 100 km vožnje z avtomobilom bo na primer pridelalo dobrih 12kg CO<sub>2</sub>-ja. 
+      </p>
+      <p>
+      <strong>ecoTravel</strong> je aplikacija za mobilne telefone, ki jo vključite vedno, ko greste na pot z avtomobilom, javnim prevozom, s kolesom ali pa peš, beležila pa vam bo vaš izpust CO<sub>2</sub>. </p>
+    </div>
+    <div class="span4 span-long">
+	  <awesomechart type="default" id='chartHome' width="300" height="290" data="graphData"></awesomechart>      
+   </div>
+    <div class="span5 span-long">
+    	<p></p>
+		<ul class="score-list nav nav-tabs nav-stacked">
+			<li ng-repeat="user in lestvicaTop">
+				<a  data-unique="1" data-trigger="hover" data-placement="top" data-html="true" title="Opravljene poti" bs-data="{{user.bsdata}}" bs-popover="'partials/__popover.html'" href="">{{$index+1}}. {{user[0]}} <span>{{user[1]|number:0}} g</span></a>
+			</li>
+		</ul>
+		<p><small>Največji prihranki glede na povprečen izpust CO<sup>2</sup> na km potovanja.</small></p>
+    </div>
+    </div>
+</div>

@@ -22,31 +22,31 @@ function Controller() {
         layout: "vertical"
     });
     $.__views.FBWin && $.addTopLevelView($.__views.FBWin);
-    $.__views.__alloyId0 = Ti.UI.createLabel({
+    $.__views.__alloyId3 = Ti.UI.createLabel({
         font: {
             fontFamily: "Open Sans"
         },
         text: "Please login with Facebook",
-        id: "__alloyId0"
+        id: "__alloyId3"
     });
-    $.__views.FBWin.add($.__views.__alloyId0);
+    $.__views.FBWin.add($.__views.__alloyId3);
     $.__views.fbButton = Alloy.Globals.FBUser.fbModule.createLoginButton({
         id: "fbButton",
         ns: "Alloy.Globals.FBUser.fbModule"
     });
     $.__views.FBWin.add($.__views.fbButton);
-    $.__views.__alloyId1 = Ti.UI.createButton({
+    $.__views.__alloyId4 = Ti.UI.createButton({
         title: "Nah, just let me in!",
-        id: "__alloyId1"
+        id: "__alloyId4"
     });
-    $.__views.FBWin.add($.__views.__alloyId1);
-    doPrijaviFB ? $.__views.__alloyId1.addEventListener("click", doPrijaviFB) : __defers["$.__views.__alloyId1!click!doPrijaviFB"] = true;
+    $.__views.FBWin.add($.__views.__alloyId4);
+    doPrijaviFB ? $.__views.__alloyId4.addEventListener("click", doPrijaviFB) : __defers["$.__views.__alloyId4!click!doPrijaviFB"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     Alloy.Globals.FBUser.fbModule.addEventListener("login", function(e) {
-        e.success ? doPrijaviFB() : e.error ? alert(e.error) : e.cancelled && alert("Canceled");
+        e.success ? doPrijaviFB() : e.error ? alert(e.error) : e.cancelled && alert(e.cancelled);
     });
-    __defers["$.__views.__alloyId1!click!doPrijaviFB"] && $.__views.__alloyId1.addEventListener("click", doPrijaviFB);
+    __defers["$.__views.__alloyId4!click!doPrijaviFB"] && $.__views.__alloyId4.addEventListener("click", doPrijaviFB);
     _.extend($, exports);
 }
 

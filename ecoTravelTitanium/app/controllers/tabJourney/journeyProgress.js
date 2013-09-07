@@ -1,6 +1,15 @@
+// TODO: delete the bellow line when done testing
+Ti.App.Properties.setString('jsonBatch', '');
+////////////
+
 var args = arguments[0] || {};
 // Replace null with empty string
-if (Ti.App.Properties.getString('positions') == null) Ti.App.Properties.setString('positions', '');
+if (Ti.App.Properties.getString('jsonBatch') == null) Ti.App.Properties.setString('jsonBatch', '');
+// Mark start of journey
+var start_journey_json = '{"journey": "' + args.transportType['transportTitle'] + '"},';
+Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);
+
+// Start following
 startFollow();
 // Send current batch every X seconds
 var send_data_interval = setInterval(sendData, Alloy.CFG.send_data_seconds * 1000);
@@ -46,7 +55,7 @@ function startFollow() {
 
 			// Save position to batch
 			var position = '{"x":' + current_latitude + ',"y":' + current_longitude + ',"speed":' + e.coords.speed + ',"time":' + e.coords.timestamp + ',"km":' + new_distance + '},';
-			Ti.App.Properties.setString('positions', Ti.App.Properties.getString('positions') + position);
+			Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + position);
 
 			// Save last postion
 			last_position_latitude = current_latitude;
@@ -72,8 +81,8 @@ function deg2rad(deg) {
 // --------------------------- Send data to Server ---------------------------
 function sendData() {
 	if (Ti.Network.online == true) {
-		var data = Ti.App.Properties.getString('positions');
-		Ti.App.Properties.setString('positions', '');
+		var data = Ti.App.Properties.getString('jsonBatch');
+		Ti.App.Properties.setString('jsonBatch', '');
 		// If there is no data return
 		if (data == '') return;
 		// Else send data to server
@@ -82,8 +91,9 @@ function sendData() {
 			Ti.API.info('Data sent: ' + json_data);
 		}, function(e) {
 			// If error save data back
-			Ti.App.Properties.setString('positions', data + Ti.App.Properties.getString('positions'));
+			Ti.App.Properties.setString('jsonBatch', data + Ti.App.Properties.getString('jsonBatch'));
 			Ti.API.error('Data not send' + json_data);
+			Ti.API.error(e);
 		});
 	}
 }
@@ -109,8 +119,14 @@ function Stopwatch() {
 
 function endJourney() {
 	clearInterval(send_data_interval);
+	// Mark end of journey
+	var end_journey_json = '{ "journey": "Stop" },';
+	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + end_journey_json);
+	sendData();
+	
+	// Open end journey page
 	var endJourney = Alloy.createController('tabJourney/endJourney', {
-		'vehicleType' : args.vehicleType,
+		'transportType' : args.transportType,
 		'journeyTime': $.journeyTime.text, 
 		'journeyDistance': $.journeyDistance.text
 	}).getView();
@@ -118,5 +134,9 @@ function endJourney() {
 		modal : true,
 		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
 	});
+	endJourney.addEventListener('close', closeJourneyProgress); 
+}
+
+function closeJourneyProgress() {
 	$.journeyProgress.close();	
 }
