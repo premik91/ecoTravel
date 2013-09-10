@@ -26,3 +26,8 @@ Alloy.Globals.CLS = require("customListSearch");
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
+
+// User settings
+if (Ti.App.Properties.getString('onlyWifi') == null) Ti.App.Properties.setBool('onlyWifi', false);
+var onlyWifi = Ti.App.Properties.getBool('onlyWifi');
+Alloy.Globals.onlyWifi = onlyWifi;

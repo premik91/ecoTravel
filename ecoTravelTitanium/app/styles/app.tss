@@ -26,6 +26,12 @@
     	fontFamily: "Bree Serif"
    	}
 },
+".notice": {
+	font: {
+		fontSize: Alloy.CFG.defaultFontSize,
+		fontFamily: "Open Sans"
+	}
+}
 
 /* Friends list view */
 "#icon" : {

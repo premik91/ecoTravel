@@ -81,20 +81,27 @@ function deg2rad(deg) {
 // --------------------------- Send data to Server ---------------------------
 function sendData() {
 	if (Ti.Network.online == true) {
-		var data = Ti.App.Properties.getString('jsonBatch');
-		Ti.App.Properties.setString('jsonBatch', '');
-		// If there is no data return
-		if (data == '') return;
-		// Else send data to server
-		var json_data = '[' + data.slice(0, -1) + ']';
-		Alloy.Globals.XHR.post(Alloy.CFG.site_batch_url, json_data, function(e) {
-			Ti.API.info('Data sent: ' + json_data);
-		}, function(e) {
-			// If error save data back
-			Ti.App.Properties.setString('jsonBatch', data + Ti.App.Properties.getString('jsonBatch'));
-			Ti.API.error('Data not send' + json_data);
-			Ti.API.error(e);
-		});
+		var wifi = Titanium.Network.networkType == Titanium.Network.NETWORK_WIFI;
+		var onlyWifi = Ti.App.Properties.getBool('onlyWifi');
+		if (wifi == true && onlyWifi == true) {
+			Ti.API.info('Only wifi enabled');
+		} else {
+			var data = Ti.App.Properties.getString('jsonBatch');
+			Ti.App.Properties.setString('jsonBatch', '');
+			// If there is no data return
+			if (data == '') return;
+			// Else send data to server
+			var json_data = '[' + data.slice(0, -1) + ']';
+			Alloy.Globals.XHR.post(Alloy.CFG.site_batch_url, json_data, function(e) {
+				Ti.API.info('Data sent: ' + json_data);
+			}, function(e) {
+				// If error save data back
+				Ti.App.Properties.setString('jsonBatch', data + Ti.App.Properties.getString('jsonBatch'));
+				Ti.API.error('Data not send' + json_data);
+				Ti.API.error(e);
+			});
+		}
+
 	}
 }
 

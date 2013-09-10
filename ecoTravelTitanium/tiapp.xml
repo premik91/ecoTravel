@@ -10,14 +10,14 @@
     </deployment-targets>
     <sdk-version>3.1.2.GA</sdk-version>
     <id>si.opacelica.ecotravel</id>
-    <name>ecotravel</name>
+    <name>ecoTravel</name>
     <version>1.0</version>
-    <publisher>not specified</publisher>
+    <publisher>opa:celica</publisher>
     <url>http://www.opacelica.si</url>
     <description>Application keeps track of savings in CO2 emissions.</description>
-    <copyright>© 2013</copyright>
+    <copyright>© 2013 Jon Premik, Roman Avsec, Rok Kralj</copyright>
     <icon>appicon.png</icon>
-    <persistent-wifi>false</persistent-wifi>
+    <persistent-wifi>true</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
     <statusbar-style>default</statusbar-style>
     <statusbar-hidden>false</statusbar-hidden>
@@ -49,7 +49,7 @@
     <modules>
         <module platform="android">facebook</module>
         <module platform="iphone">facebook</module>
-    	<module platform="iphone">dk.napp.social</module> 
+        <module platform="iphone">dk.napp.social</module>
     </modules>
     <property name="ti.facebook.appid">551670011523207</property>
     <plugins>
