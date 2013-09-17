@@ -95,7 +95,7 @@ var TiHelpers={};
 					return JSON.parse(contents);
 				}
 			}catch(err){
-				Ti.API.info('TaffyDb Load Error: ' + err);
+				Ti.API.TFinfo('TaffyDb Load Error: ' + err);
 				throw "Invalid TaffyDb file";
 			}
 		}else{
@@ -113,7 +113,7 @@ var TiHelpers={};
 				return JSON.parse(fetchTest);
 			}
 		}catch(err){
-			Ti.API.info('TaffyDb Load Error: ' + err);
+			Ti.API.TFinfo('TaffyDb Load Error: ' + err);
 			throw "Invalid TaffyDb file";
 		}	
 	};

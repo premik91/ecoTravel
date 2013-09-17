@@ -15,7 +15,7 @@
 					<ListSection id="friendsList"></ListSection>
 				</ListView>
 			</Window>
-		</NavigationGroup>>
+		</NavigationGroup>
 		</Window>
 	</Tab>
 </Alloy>

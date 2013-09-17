@@ -1,7 +1,7 @@
 <Alloy>
 	<Tab id="tabSettings" icon="/icons/settings.png" title="Settings">	
-	<Window class="container" title="Settings" layout="vertical">
-   		<Widget id="settingsTable" src="ti.pedro.forms" />
-	</Window>
+		<Window class="container" title="Settings" layout="vertical">
+	   		<Widget id="settingsTable" src="ti.pedro.forms" />
+		</Window>
 	</Tab>	
 </Alloy>

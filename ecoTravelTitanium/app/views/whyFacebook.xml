@@ -1,0 +1,29 @@
+<Alloy>
+	<Window id="whyFacebookWindow" class="container" title="Why we use Facebook?" layout="vertical">
+		<ScrollView layout="vertical" id="mainView">
+			<View layout="composite" height="100" top="8" left="8" right="8">
+				<ImageView image="images/appicon.png" id="whyFacebookLogo"></ImageView>
+				<ImageView image="icons/plus.png" id="plusIcon"></ImageView>
+				<ImageView image="images/facebook-icon.png" id="facebookLogo"></ImageView>
+			</View>
+			<Label class="whyFacebookText" top="10">
+				Using Facebook as our login system helps improve the user experience in a number of ways:
+			</Label>
+			<Label class="whyFacebookText listItems" top="10">
+				1. It makes it super fast to sign up and create EcoTravel profile.
+			</Label>
+			<Label class="whyFacebookText listItems">
+				2. It allows you to see how much C02 your friends produced and saved.
+			</Label>
+			<Label class="whyFacebookText listItems">
+				3. It helps ensure that people are using their real identities.
+			</Label>
+			<Label class="whyFacebookText listItems">
+				4. It makes it easy for you to share stuff with your Facebook friends, if you want to.
+			</Label>
+			<Label class="whyFacebookText" top="10">
+				We really want to earn your trust. Sharing is always under your control and we will not misuse your personal information in any way.
+			</Label>
+		</ScrollView>
+	</Window>
+</Alloy>

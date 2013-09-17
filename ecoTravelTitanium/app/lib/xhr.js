@@ -127,7 +127,7 @@ XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	// When the connection was successful
 	xhr.onload = function() {
 		// Check the status of this
-		Ti.API.info("Called xhr.onload with status " + xhr.status);
+		//Ti.API.TFinfo("Called xhr.onload with status " + xhr.status);
 		result.status = xhr.status == 200 ? "ok" : xhr.status;
 		result.data = xhr.responseText;
 		
@@ -137,7 +137,7 @@ XHR.prototype.post = function(url, data, onSuccess, onError, extraParams) {
 	// When there was an error
 	xhr.onerror = function(e) {
 		// Check the status of this		
-		Ti.API.info("Called xhr.onerror with status " + xhr.status);		
+		//Ti.API.TFinfo("Called xhr.onerror with status " + xhr.status);		
 		result.status = "error";
 		result.data = e.error;
 		result.code = xhr.status;

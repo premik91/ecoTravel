@@ -1,7 +1,12 @@
 <Alloy>
-	<Window id="FBWin" class="container" title="Facebook login" layout="vertical">
-		<Label>Please login with Facebook</Label>
-        <LoginButton id="fbButton" ns="Alloy.Globals.FBUser.fbModule"/>
-		<Button title="Nah, just let me in!" onClick="doPrijaviFB">
+	<Window navBarHidden="true" id="loginScreen">
+		<NavigationGroup id="whyFacebookNav">
+			<Window id="FBWin" class="container" title="Facebook login" layout="vertical">
+				<ImageView image="images/appicon.png" class="logo"></ImageView>
+				<Label class="whyFacebookText" top="20">ecoTravel is a mobile app for tracking you CO2 emissions when you travel by car, public transport or just by foot.</Label>
+			    <LoginButton id="fbButton" ns="Alloy.Globals.FBUser.fbModule" style="Ti.Facebook.BUTTON_STYLE_WIDE" top="40"/>
+				<Label onClick="whyFacebook" id="whyFacebookButton">Why we use Facebook?</Label>
+			</Window>
+		</NavigationGroup>
 	</Window>
 </Alloy>

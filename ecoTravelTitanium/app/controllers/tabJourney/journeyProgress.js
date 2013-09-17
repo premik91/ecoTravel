@@ -1,5 +1,5 @@
-// TODO: delete the bellow line when done testing
-Ti.App.Properties.setString('jsonBatch', '');
+// TODO: comment out or delete the bellow line when done testing
+// Ti.App.Properties.setString('jsonBatch', '');
 ////////////
 
 var args = arguments[0] || {};
@@ -34,7 +34,7 @@ function startFollow() {
 
 			var new_distance = getDistanceInKm(last_position_latitude, last_position_longitude, current_latitude, current_longitude);
 
-			// Ti.API.info(e);
+			// Ti.API.TFinfo(e);
 			distance += new_distance;
 			if (distance_in_meters) {
 				var meters = distance * 1000;
@@ -84,7 +84,7 @@ function sendData() {
 		var wifi = Titanium.Network.networkType == Titanium.Network.NETWORK_WIFI;
 		var onlyWifi = Ti.App.Properties.getBool('onlyWifi');
 		if (wifi == true && onlyWifi == true) {
-			Ti.API.info('Only wifi enabled');
+			Ti.API.TFinfo('Only wifi enabled');
 		} else {
 			var data = Ti.App.Properties.getString('jsonBatch');
 			Ti.App.Properties.setString('jsonBatch', '');
@@ -93,7 +93,7 @@ function sendData() {
 			// Else send data to server
 			var json_data = '[' + data.slice(0, -1) + ']';
 			Alloy.Globals.XHR.post(Alloy.CFG.site_batch_url, json_data, function(e) {
-				Ti.API.info('Data sent: ' + json_data);
+				Ti.API.TFinfo('Data sent: ' + json_data);
 			}, function(e) {
 				// If error save data back
 				Ti.App.Properties.setString('jsonBatch', data + Ti.App.Properties.getString('jsonBatch'));
@@ -135,15 +135,11 @@ function endJourney() {
 	var endJourney = Alloy.createController('tabJourney/endJourney', {
 		'transportType' : args.transportType,
 		'journeyTime': $.journeyTime.text, 
-		'journeyDistance': $.journeyDistance.text
+		'journeyDistance': distance
 	}).getView();
 	endJourney.open({
 		modal : true,
 		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
 	});
-	endJourney.addEventListener('close', closeJourneyProgress); 
-}
-
-function closeJourneyProgress() {
 	$.journeyProgress.close();	
 }

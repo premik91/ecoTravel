@@ -107,19 +107,19 @@ if (Titanium.Platform.name == 'iPhone OS'){
 	//iOS only module
 	
 	var Social = require('dk.napp.social');
-	Ti.API.info("module is => " + Social);
+	Ti.API.TFinfo("module is => " + Social);
 	
-    Ti.API.info("Facebook available: " + Social.isFacebookSupported());
-    Ti.API.info("Twitter available: " + Social.isTwitterSupported());
-    Ti.API.info("SinaWeibo available: " + Social.isSinaWeiboSupported());
+    Ti.API.TFinfo("Facebook available: " + Social.isFacebookSupported());
+    Ti.API.TFinfo("Twitter available: " + Social.isTwitterSupported());
+    Ti.API.TFinfo("SinaWeibo available: " + Social.isSinaWeiboSupported());
     
     // find all Twitter accounts on this phone
     if(Social.isRequestTwitterSupported()){ //min iOS6 required
 	    var accounts = []; 
 	    Social.addEventListener("accountList", function(e){
-	    	Ti.API.info("Accounts:");
+	    	Ti.API.TFinfo("Accounts:");
 	    	accounts = e.accounts; //accounts
-	    	Ti.API.info(accounts);
+	    	Ti.API.TFinfo(accounts);
 	    });
 	    
 	    Social.twitterAccountList();
@@ -163,9 +163,9 @@ if (Titanium.Platform.name == 'iPhone OS'){
 	});
 	
 	Social.addEventListener("facebookAccount", function(e){ 
-		Ti.API.info("facebookAccount: "+e.success);	
+		Ti.API.TFinfo("facebookAccount: "+e.success);	
 		fbAccount = e.account;
-		Ti.API.info(e); 
+		Ti.API.TFinfo(e); 
 	});
 	
 	fbIdentifierRequestBtn.addEventListener("click", function(){
@@ -288,54 +288,54 @@ if (Titanium.Platform.name == 'iPhone OS'){
     
 	
 	Social.addEventListener("twitterRequest", function(e){ //default callback
-		Ti.API.info("twitterRequest: "+e.success);	
-		Ti.API.info(e.response); //json
-		Ti.API.info(e.rawResponse); //raw data - this is a string
+		Ti.API.TFinfo("twitterRequest: "+e.success);	
+		Ti.API.TFinfo(e.response); //json
+		Ti.API.TFinfo(e.rawResponse); //raw data - this is a string
 	});
 	
 	
 	
 	Social.addEventListener("facebookRequest", function(e){ //default callback
-		Ti.API.info("facebookRequest: "+e.success);	
-		Ti.API.info(e); 
+		Ti.API.TFinfo("facebookRequest: "+e.success);	
+		Ti.API.TFinfo(e); 
 	});
 	
 	Social.addEventListener("facebookProfile", function(e){
-		Ti.API.info("facebook profile: "+e.success);	
-		Ti.API.info(e.response); //json
+		Ti.API.TFinfo("facebook profile: "+e.success);	
+		Ti.API.TFinfo(e.response); //json
 	});
 	
 	Social.addEventListener("complete", function(e){
-		Ti.API.info("complete: " + e.success);
+		Ti.API.TFinfo("complete: " + e.success);
 		console.log(e);
 
 		if (e.platform == "activityView" || e.platform == "activityPopover") {
 			switch (e.activity) {
 				case Social.ACTIVITY_TWITTER:
-					Ti.API.info("User is shared on Twitter");
+					Ti.API.TFinfo("User is shared on Twitter");
 					break;
 
 				case Social.ACTIVITY_CUSTOM:
-					Ti.API.info("This is a customActivity: " + e.activityName);
+					Ti.API.TFinfo("This is a customActivity: " + e.activityName);
 					break;
 			}
 		}
 	});
 	
 	Social.addEventListener("error", function(e){
-		Ti.API.info("error:");	
-		Ti.API.info(e);	
+		Ti.API.TFinfo("error:");	
+		Ti.API.TFinfo(e);	
 	});
 	
 	Social.addEventListener("cancelled", function(e){
-		Ti.API.info("cancelled:");
-		Ti.API.info(e);		
+		Ti.API.TFinfo("cancelled:");
+		Ti.API.TFinfo(e);		
 	});
 	
 	
 	Social.addEventListener("customActivity", function(e){
-		Ti.API.info("customActivity");	
-		Ti.API.info(e);	
+		Ti.API.TFinfo("customActivity");	
+		Ti.API.TFinfo(e);	
 		
 		//MAKE YOUR OWN CUSTOM ACTIVITY !
 		setTimeout(function(){

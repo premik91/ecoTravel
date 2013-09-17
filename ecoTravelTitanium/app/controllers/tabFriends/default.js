@@ -1,22 +1,19 @@
 /*
-
 var friends = '[["Rok Kralj",311.0021136042848,{"bike":15.453,"car":20.3,"bicycle":12.7,"train":1.7977324365584}],["Jon Premik",1265.0021136042848,{"car":45.3,"bicycle":698.456,"train":51.7977324365584}],["Roman Avsec",-2045.0021136042848,{"bike":15.453,"car":21345.3,"bicycle":12.7,"train":12.7977324365584}]]';
-
 */
 // Enable search
 Alloy.Globals.CLS.setSearch($.search, $.friendsList);
-
 function onFocus() {
-	Ti.API.info('Getting XHR friends');
+	Ti.API.TFinfo('Getting XHR friends');
 	friends = Alloy.Globals.FBUser.getCurrentUserFriends();	
 	if (Object.keys(friends).length === 0) { // refresh only if user data is not available
 		Alloy.Globals.FBUser.refreshCurrentUserFriends(function(e) {
-			Ti.API.info('Success refreshing friends!');
+			Ti.API.TFinfo('Success refreshing friends!');
 			refreshFriendsViewData();
-			Ti.API.info(e);
+			Ti.API.TFinfo(e);
 		}, function(e) {
-			Ti.API.info('Refreshing friends failed!');
-			Ti.API.info(e);
+			Ti.API.TFinfo('Refreshing friends failed!');
+			Ti.API.TFinfo(e);
 		});
 	}
 }

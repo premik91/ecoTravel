@@ -107,7 +107,7 @@ exports = function(params) {
 			'screen_name': params.twitter_account
 		});
 		
-		Ti.API.info(97);
+		Ti.API.TFinfo(97);
 		
 		
 	}

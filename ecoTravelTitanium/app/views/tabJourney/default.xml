@@ -1,6 +1,6 @@
 <Alloy>
 	<Tab id="tabJourney" icon="/icons/journey.png" title="Journey">
-	<Window class="container" title="Start new journey" layout="composite">
+	<Window id="windowJourney" class="container" title="Start new journey" layout="composite">
 		<Widget id="buttongrid" src="com.appcelerator.buttongrid" top="0" />
 		<Label class="notice" text="Tap on a transport mode to start new journey!" bottom="3"/>		
 	</Window>

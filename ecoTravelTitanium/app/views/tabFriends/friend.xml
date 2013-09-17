@@ -2,7 +2,7 @@
 	<Window id="friendWindow" class="container" title="Did he do well?" layout="vertical">
 		<View layout="composite" id="mainView" height="100">
 			<ImageView image="images/user.png" class="userImage"></ImageView>
-			<Label id="friendName" class="labelUser" top="20"></Label>
+			<Label id="friendName" class="labelUser title" top="20"></Label>
 			<Label id="friendPoints" class="labelUser" bottom="20"></Label>
 		</View>
 		<TableView id="tableView"></TableView>

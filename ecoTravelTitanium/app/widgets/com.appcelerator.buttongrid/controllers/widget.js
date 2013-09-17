@@ -131,7 +131,7 @@ exports.init = function ButtonGridInit(args) {
     $._params = _.defaults(args, defaults);
 
     _.each($._buttons, function (button, index) {
-        Ti.API.info('Buttongrid: creating button ' + button.id);
+//        Ti.API.TFinfo('Buttongrid: creating button ' + button.id);
 
         var buttonProps = _.defaults(button, {
             center: { x: "50%", y: "50%" },
@@ -180,7 +180,15 @@ exports.init = function ButtonGridInit(args) {
                 button.click(e);
                 e.source = temp;
             });
+            btn.addEventListener('touchstart', function(e) {
+            	$._buttons[index].b.backgroundColor = $._params.backgroundSelectedColor;
+            });
+            btn.addEventListener('touchend', function(e) {
+            	$._buttons[index].b.backgroundColor = $._params.backgroundColor;
+            });
+            
         }
+        
         $.scrollview.add($._buttons[index].b);
 
         if (OS_IOS && button.title) {
@@ -256,7 +264,7 @@ exports.destroy = function() {
  * @param {Object} e Unused.
  */
 exports.relayout = function ButtonGridRelayout(e) {
-    Ti.API.info("ButtonGrid: relayout");
+    Ti.API.TFinfo("ButtonGrid: relayout");
     var duration = $._params.duration || 2000;
 
     // Modify the width of the overall scroll view to reflect the rotation.

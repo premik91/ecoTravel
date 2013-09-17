@@ -11,7 +11,7 @@
     <sdk-version>3.1.2.GA</sdk-version>
     <id>si.opacelica.ecotravel</id>
     <name>ecoTravel</name>
-    <version>1.0</version>
+    <version>1.05</version>
     <publisher>opa:celica</publisher>
     <url>http://www.opacelica.si</url>
     <description>Application keeps track of savings in CO2 emissions.</description>
@@ -27,6 +27,9 @@
     <guid>611bb678-cfb3-4b07-8335-2f6e43f59498</guid>
     <property name="ti.ui.defaultunit">system</property>
     <iphone>
+		<backgroundModes>
+			<mode>location</mode>
+        </backgroundModes>    
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
         </orientations>
@@ -50,9 +53,11 @@
         <module platform="android">facebook</module>
         <module platform="iphone">facebook</module>
         <module platform="iphone">dk.napp.social</module>
+        <module platform="iphone">dk.napp.testflight</module>
     </modules>
-    <property name="ti.facebook.appid">551670011523207</property>
+    <property name="ti.facebook.appid">164880290381042</property>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
+    <property name="ti.deploytype">development</property>
 </ti:app>

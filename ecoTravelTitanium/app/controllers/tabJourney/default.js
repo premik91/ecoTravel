@@ -8,16 +8,18 @@ $.buttongrid.init({
         { id: 'buttonBike', title: 'Bike', subtitle: 'bike, motor bike', backgroundImage:'images/transports/bike.png', click:_.bind(buttonClick, this) },
     ],
     buttonWidth: 160,
-    buttonHeight: 114,
-    realButtonWidth: 60,
-    realButtonHeight: 60,
+    buttonHeight: (Alloy.Globals.screenSize == "iPhone5") ? 144 : 114,
+    realButtonWidth: (Alloy.Globals.screenSize == "iPhone5") ? 90 : 60,
+    realButtonHeight: (Alloy.Globals.screenSize == "iPhone5") ? 90 : 60,
     duration: 1,
-    textColor: '#8EB92A',
-    textSize: Alloy.CFG.defaultFontSize+1,
+    backgroundColor: "transparent",
+    backgroundSelectedColor: "#E3E9EB",
+    textColor: Alloy.CFG.greenColor,
+    textSize: Alloy.CFG.defaultFontSize+2,
     textFont: 'Bree Serif',
     textSubSize: Alloy.CFG.defaultFontSize-2,
     textSubFont: 'Open Sans',
-    textSubColor: '#3A3F44',
+    textSubColor: Alloy.CFG.grayColor
 });
 
 

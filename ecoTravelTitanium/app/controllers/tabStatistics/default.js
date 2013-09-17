@@ -5,27 +5,37 @@
  */
 
 function onFocus() {
-	Ti.API.info('Getting XHR statistics');
+	Ti.API.TFinfo('Getting XHR statistics');
 	user = Alloy.Globals.FBUser.getCurrentUserStats();
 	if (Object.keys(user).length === 0) { // refresh only if user data is not available	
-		Alloy.Globals.FBUser.refreshCurrentUserStats(function(e) {
-			Ti.API.info('Success refreshing!');
-			refreshStatViewData();
-			Ti.API.info(e);
-		}, function(e) {
-			Ti.API.info('Success failed');
-			Ti.API.info(e);
-		});
+		refreshXHRData();
+	} else {
+		refreshStatViewData();
 	}
 }
 
+// ptr is Pull to Refresh control when we manually invoke refresh 
+function refreshXHRData(ptr) {
+	Alloy.Globals.FBUser.refreshCurrentUserStats(function(e) {
+		Ti.API.TFinfo('Success refreshing!');
+		refreshStatViewData();
+		Ti.API.TFinfo(e);
+		if (ptr && ptr.hide) ptr.hide();
+	}, function(e) {
+		Ti.API.TFinfo('Success failed');
+		Ti.API.TFinfo(e);
+		if (ptr && ptr.hide) ptr.hide();		
+	});
+}
+
 // TODO: Pull to refresh
-function refreshStatViewData() {
+function refreshStatViewData(e) {
 	user = Alloy.Globals.FBUser.getCurrentUserStats();
-	$.points.text = user['total'];
 	$.name.text = user['name'];
-	$.distance.text = user['km'];
-	$.co2saved.text = user['saved'];
+	$.points.text = 'CO₂ released: ' + (user['total']/1000).toFixed(2) + ' kg';
+	$.distance.text = 'Distance traveled: ' + user['km'].toFixed(2) + ' km';
+	$.co2saved.text = 'CO₂ saved: ' + (user['saved']/1000).toFixed(2) + ' kg';
+	$.userImage.setImage(Alloy.Globals.FBUser.getCurrentUserPicture());
 
 	var tableData = [];
 	var i = 0;
@@ -108,3 +118,7 @@ function refreshStatViewData() {
 
 	$.tableView.data = tableData;
 }
+
+function pullToRefresh(e) {
+	refreshXHRData(e);
+} 

@@ -1,51 +1,52 @@
 // https://github.com/viezel/TiSocial.Framework
 // v 1.7.0
-
 var args = arguments[0] || {};
+var currentTransport = Alloy.Globals.FBUser.getTransportTypes()[args.transportType['transportTitle'].toLowerCase()];
+// Get CO2 saving per killometer
+var savings = Alloy.Globals.FBUser.getTransportTypes()['AVG'] - currentTransport;
+savings *= args.journeyDistance;
+
+var resultsShare = 'I just saved {0} CO2 by {1} {2}km with ecoTravel. \n Hooray for alternative means of travel!'.format(
+	savings,
+	args.transportType['transportTitle'],
+	args.journeyDistance
+);
 // Show statistics
-$.journeyTime.text = args.journeyTime;
-$.journeyPoints.text = args.journeyDistance;
-$.journeyDistance.text = args.journeyDistance;
+$.journeyTime.text = 'All travel time {0}'.format(args.journeyTime);
+$.journeySavings.text = 'I just saved {0} CO2'.format(savings);
+$.journeyDistance.text = 'I made {0} km'.format(args.journeyDistance);
+
 function finishJourney() {
-	// TODO: It should return to home view
 	$.endJourney.close();
 }
-
-var shareBtn = Ti.UI.createButton({
-	width : 200,
-	height : 35,
-	top : 15,
-	title : 'Share Results'
-});
-$.mainView.add(shareBtn);
 
 if (Titanium.Platform.name == 'iPhone OS') {
 	//iOS only module
 	var Social = require('dk.napp.social');
-	Ti.API.info("module is => " + Social);
+	Ti.API.TFinfo("module is => " + Social);
 
-	Ti.API.info('Facebook available: ' + Social.isFacebookSupported());
-	Ti.API.info('Twitter available: ' + Social.isTwitterSupported());
+	Ti.API.TFinfo('Facebook available: ' + Social.isFacebookSupported());
+	Ti.API.TFinfo('Twitter available: ' + Social.isTwitterSupported());
 
 	// find all Twitter accounts on this phone
 	if (Social.isRequestTwitterSupported()) {//min iOS6 required
 		var accounts = [];
 		Social.addEventListener('accountList', function(e) {
-			Ti.API.info('Accounts:');
+			Ti.API.TFinfo('Accounts:');
 			accounts = e.accounts;
 			//accounts
-			Ti.API.info(accounts);
+			Ti.API.TFinfo(accounts);
 		});
 
 		Social.twitterAccountList();
 	}
 
-	shareBtn.addEventListener('click', function() {
+	$.shareBtn.addEventListener('click', function() {
 		if (Social.isActivityViewSupported()) {//min iOS6 required
 			Social.activityView({
-				text : 'Share',
-				image : 'images/pin.png',
-				removeIcons : 'print,sms,contact,camera,weibo'
+				text : resultsShare,
+				image : 'iphone/appicon.png',
+				removeIcons : 'print,sms,contact,camera,weibo,copy'
 			}
 			// , [{
 				// title : 'Open in Safari',

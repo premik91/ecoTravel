@@ -3,8 +3,14 @@
 		<View layout="vertical" height="88%" id="mainView">
 			<Label>Journey statistics</Label>
 			<Label id="journeyTime"></Label>
-			<Label id="journeyPoints"></Label>
+			<Label id="journeySavings"></Label>
 			<Label id="journeyDistance"></Label>
+			<Button width="200" height="35" title="Share results" id="shareBtn" top="15"></Button>
+			<View layout="horizontal" height="20" left="128" width="100">
+				<ImageView image="icons/facebook-sign.png" class="shareIcon"></ImageView>
+				<ImageView image="icons/twitter-sign.png" class="shareIcon"></ImageView>
+				<ImageView image="icons/envelope.png" class="shareIcon"></ImageView>
+			</View>
 		</View>
 		<View layout="horizontal" height="12%">
 			<Button title="Finish journey" left="10" right="10" top="5" bottom="5" width=Titanium.UI.FILL onClick="finishJourney"></Button>			

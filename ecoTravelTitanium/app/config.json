@@ -1,5 +1,13 @@
 {
 	"defaultFontSize": 13,
+	"defaultFontSizeBig": 15,
+	"defaultFontSizeSmall": 12,
+	"serifFont" : "Bree Serif",
+	"sansFont" : "Open Sans",
+	"grayColor" : "#3A3F44",
+	"lightGrayColor": "#484D51",
+	"greenColor" : "#8EB92A",
+	"blueColor" : "#3A87AD",	
 	"global": {}, 
 	"env:development": {}, 
 	"env:test": {}, 
@@ -17,7 +25,8 @@
 	"site_batch_url": "http://78.47.47.172:8080/trip/batch/",
 	"site_transport_modes_url": "http://78.47.47.172:8080/api/modes/",
 	"send_data_seconds": 15,
-	"appId": 551670011523207,
+	"appId": 164880290381042,
 	"twitterConsumerKey": "RMuWGYKB42uNCZLnrfmtMg",
-	"twitterConsumerSecret": "R2eQ7vzQidmVOKEnN08kOjOx6VwaNss3uY4f094hU"
+	"twitterConsumerSecret": "R2eQ7vzQidmVOKEnN08kOjOx6VwaNss3uY4f094hU",
+	"TestFlightToken": "6623cde8-8d78-4a33-89b3-e7d777df3a66"
 }

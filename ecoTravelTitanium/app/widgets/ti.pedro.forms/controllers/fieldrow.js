@@ -12,7 +12,7 @@ $.row.add(field);
 
 exports.getId = function() {
 	return args.id;
-}
+};
 exports.getValue = function() {
 	return field.value;
-}
+};

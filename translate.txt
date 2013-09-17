@@ -1,0 +1,58 @@
+----------First page:
+Average person annually produces about 10 tons of carbon dioxide. A large part of it is produced by various means of transport: 100 km by car would produce around 12kg of CO2.
+
+ecoTravel is an app for mobile phones that you should activate whenever you travel by car, public transport, bike or on foot. App will track your current CO2 emissions.
+
+emissions and savings
+How much CO2 have we spent?
+
+top 5 savers
+who saved most glaciers?
+
+----------Statistics:
+saving statistics
+we saved 8kg of CO2
+The above line indicates the total CO2 savings of all transport types
+
+emissions statistics
+we made 29kg of CO2
+The above line indicates the total CO2 emissions of all transport types
+
+travel statistics
+we made 334 km
+The above line indicates the total number of miles made by any transport type
+
+transport statistics
+How much CO2 was produced on average trip?
+The value of the scale shows the CO2 emissions on average trip
+
+----------Lestvice (Scales?)
+Top of the Top
+Who saved most?
+The value of the scale represents the total savings of the average CO2 emissions.
+
+Top od the day
+Who is the greenest today?
+The value of the scale represents the total savings of the average CO2 emissions.
+
+Top of the week
+Who is trying to be good?
+The value of the scale represents the total savings of the average CO2 emissions.
+
+Top of the month
+The greenest of the green
+The value of the scale represents the total savings of the average CO2 emissions.
+
+----------ogljicni odtis (Carbon footprint)
+What is a carbon footprint?
+"A measure of the total amount of carbon dioxide (CO2) and methane (CH4) emissions of a defined population, system or activity, considering all relevant sources, sinks and storage within the spatial and temporal boundary of the population, system or activity of interest. Calculated as carbon dioxide equivalent (CO2e) using the relevant 100-year global warming potential."
+
+Carbon footprint is a term for a set of greenhouse gasses that a certain object, device, product or process directly on indirectly releases into the environment. Carbon footprint can be calculated and evaluated. Because carbon dioxide is the most recognised greenhouse gas, we will limit our selves to only this one.
+
+ecoTravel to the rescue!
+Transports represent around 34% of a carbon footprint each individual makes in a developed world. That is why we created a simple app that will help you track all you CO2 emissions you create by any means of transport. We currently support public transports such as bus and train, a car and a bike and of course walking and cycling.
+
+For calculating the carbon footprint we developed a simple logic that takes the average CO2 emission a person makes per kilometer and compares it to the average CO2 emission the chosen transport type makes. The difference between the compared is the result of actual CO2 emissions and possible savings.
+
+
+

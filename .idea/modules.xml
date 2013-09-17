@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SPQM/.idea/SPQM.iml" filepath="$PROJECT_DIR$/../SPQM/.idea/SPQM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ecoTravel.iml" filepath="$PROJECT_DIR$/.idea/ecoTravel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../premik91.com/.idea/premik91.com.iml" filepath="$PROJECT_DIR$/../premik91.com/.idea/premik91.com.iml" />
+    </modules>
+  </component>
+</project>
+

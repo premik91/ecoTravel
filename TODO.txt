@@ -5,6 +5,8 @@
 
 -fix top lestvice
 
+-display all friends, those that don't already use our app show invite button
+
 -add two fields to user database:
 	friends_only: boolean (default: false)
 	public: boolean (default: true)

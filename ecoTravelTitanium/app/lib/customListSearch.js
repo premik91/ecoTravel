@@ -22,7 +22,7 @@ setSearch = function(s,t) {
 			t.setItems(t.origData);
 		} else {
 			for (row in t.origData) {
-				Ti.API.info(row);
+				Ti.API.TFinfo(row);
 				if (t.origData[row].name.text && t.origData[row].name.text.toLowerCase().indexOf(e.value.toLowerCase()) != -1) {
 					newDataRows.push(t.origData[row]);
 				}

@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+provisioning_profiles/adhoc/16E30F49-7580-4CED-812F-CB7318BCBDEA/appid=si.opacelica.*
+provisioning_profiles/adhoc/16E30F49-7580-4CED-812F-CB7318BCBDEA/name=Ad Hoc Opa celica DIST
+provisioning_profiles/adhoc/16E30F49-7580-4CED-812F-CB7318BCBDEA/uuid=16E30F49-7580-4CED-812F-CB7318BCBDEA
+provisioning_profiles/development/43CB0B06-A728-4496-AB04-FC98CCDC4BEB/appid=si.uni-lj.fri.gameteam.*
+provisioning_profiles/development/43CB0B06-A728-4496-AB04-FC98CCDC4BEB/name=gameteamS
+provisioning_profiles/development/43CB0B06-A728-4496-AB04-FC98CCDC4BEB/uuid=43CB0B06-A728-4496-AB04-FC98CCDC4BEB
+provisioning_profiles/development/6F7DCD71-600F-4D46-9177-87FF13EE1FC7/appid=si.opacelica.*
+provisioning_profiles/development/6F7DCD71-600F-4D46-9177-87FF13EE1FC7/name=Ad Hoc Opa celica
+provisioning_profiles/development/6F7DCD71-600F-4D46-9177-87FF13EE1FC7/uuid=6F7DCD71-600F-4D46-9177-87FF13EE1FC7
+provisioning_profiles/development/8C056766-BCEC-4372-90C8-80102261E2F0/appid=*
+provisioning_profiles/development/8C056766-BCEC-4372-90C8-80102261E2F0/name=iOS Team Provisioning Profile\: *
+provisioning_profiles/development/8C056766-BCEC-4372-90C8-80102261E2F0/uuid=8C056766-BCEC-4372-90C8-80102261E2F0
+provisioning_profiles/development/929F837E-DD77-4771-A419-84A365C48FF7/appid=si.opacelica.zelenapot
+provisioning_profiles/development/929F837E-DD77-4771-A419-84A365C48FF7/name=Ad Hoc Zelena Pot
+provisioning_profiles/development/929F837E-DD77-4771-A419-84A365C48FF7/uuid=929F837E-DD77-4771-A419-84A365C48FF7

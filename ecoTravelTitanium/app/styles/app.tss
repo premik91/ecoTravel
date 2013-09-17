@@ -1,59 +1,112 @@
-"Window": {
-	barColor: "#A2BF68",
-	backgroundColor: "#E5E5E5"
+'Window': {
+	barColor: '#A2BF68',
+	backgroundColor: '#F5F5F5'
 	
 },
-"SearchBar": {
-	barColor: "#395B98"
+'SearchBar': {
+	barColor: '#395B98'
 },
-"WebView": {
+'WebView': {
 	backgroundColor:'transparent',
 	top: 0, bottom: 0,
-	left: "0%", right: "0%"
+	left: '0%', right: '0%'
 },
-"Label": {
+'Label': {
 	font:{
-    	fontFamily: "Open Sans"
+    	fontFamily: 'Open Sans'
    	}
 },
-".opensans": {
+'.opensans': {
 	font:{
-    	fontFamily: "Open Sans"
+    	fontFamily: 'Open Sans'
    	}
 },
-".breeserif": {
+'.breeserif': {
 	font:{
-    	fontFamily: "Bree Serif"
+    	fontFamily: 'Bree Serif'
    	}
 },
-".notice": {
+'.notice': {
 	font: {
 		fontSize: Alloy.CFG.defaultFontSize,
-		fontFamily: "Open Sans"
+		fontFamily: 'Open Sans'
 	}
-}
+},
+'.logo' : {
+	width: "130dp", height: '130dp', top: '20dp', borderRadius: '25dp'
+},
 
 /* Friends list view */
-"#icon" : {
+'#icon' : {
     width: '50dp', height: '50dp', left: 0
 },
-"#title" : {
-    color: 'black',
-    font: { fontFamily:'Arial', fontSize: '16dp', fontWeight:'bold' },
+'#title' : {
+    color: Alloy.CFG.grayColor,
+    font: { fontFamily:Alloy.CFG.serifFont, fontSize: Alloy.CFG.defaultFontSizeBig, fontWeight:'bold' },
     left: '60dp', top: 0, height: '20'
 },
-"#subtitle" : {
-    color: 'gray',
-    font: { fontFamily:'Arial', fontSize: '14dp' },
+'#subtitle' : {
+    color: Alloy.CFG.lightGrayColor,
+    font: { fontFamily:Alloy.CFG.sansFont, fontSize: Alloy.CFG.defaultFontSizeSmall },
     left: '60dp', top: '25dp'
 },
 
 /* Friend */
-".userImage" : {
-	width: '100dp', height: '100dp', left: 0
+'.statistcsMainView' : {
+	top: 5, bottom: 5, left: 5, right: 5
 }
 
+'.userImage' : {
+	width: '100dp', height: '100dp', left: 0, borderRadius: '10p'
+},
+
 /* User */
-".labelUser" : {
-	left: '100dp'
+'.labelUser' : {
+	left: '105dp',
+	font: { fontFamily:Alloy.CFG.sansFont, fontSize: Alloy.CFG.defaultFontSize }	
+},
+
+'.title' : {
+	font: { fontFamily:Alloy.CFG.serifFont, fontSize: Alloy.CFG.defaultFontSizeBig }
+},
+
+/* Login screen */
+'#whyFacebookLogo' : {
+	width: '100dp', height: '100dp', left: '0', borderRadius: '10dp'
+},
+
+'.whyFacebookText' : {
+	left: '20dp', right: '20dp', font: { fontFamily:Alloy.CFG.sansFont, fontSize: Alloy.CFG.defaultFontSize }
+},
+
+'#facebookLogo' : {
+	width: '100dp', height: '100dp', right: '0', borderRadius: '10dp'
+},
+
+'#plusIcon' : {
+	width: '50dp', height: '50dp', opacity: '0.4'
+},
+
+'.listItems' : {
+	left: '30dp'
+},
+
+'#whyFacebookButton' : {
+	top: '20dp',
+	font: { fontFamily:Alloy.CFG.sansFont, fontSize: Alloy.CFG.defaultFontSizeSmall },
+	color: 'blue'
+},
+
+// Share screen, end journey
+'.shareIcon' : {
+	width: '20dp', height: '20dp', left: '2dp', right: '2dp', opacity: '0.5'
 }
+
+
+
+
+
+
+
+
+

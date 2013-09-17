@@ -1,6 +1,6 @@
 Alloy.Globals.FBUser.fbModule.addEventListener('login', function(e) {
     if (e.success) {
-        doPrijaviFB();
+        doLoginFB();
     } else if (e.error) {
         alert(e.error);
     } else if (e.cancelled) {
@@ -8,10 +8,15 @@ Alloy.Globals.FBUser.fbModule.addEventListener('login', function(e) {
     }
 });
 
-function doPrijaviFB() {
+function doLoginFB() {
 	Alloy.Globals.FBUser.loginToServer(function() {
-		Ti.API.info('Callback za prijavo ratal!');
+		Ti.API.TFinfo('Callback za prijavo ratal!');
 	});
-	$.FBWin.close();
+	$.loginScreen.close();
 	return true;
+}
+
+function whyFacebook () {
+	var facebook = Alloy.createController('whyFacebook', {}).getView();
+	$.whyFacebookNav.open(facebook, {animated: 'true'});
 }

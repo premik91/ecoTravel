@@ -9,21 +9,22 @@
 	top: 0
 },
 "#title" : {
-	left: '10dp',
+	left: '8dp',
 	right: '5dp',
 	height: Ti.UI.FILL,
 	font: {
-		fontSize: '18dp',
-		fontWeight: 'bold'
+		fontSize: Alloy.CFG.defaultFontSizeBig,
+		fontFamily: Alloy.CFG.serifFont
 	},
-	color: '#3B5688'
+	color: Alloy.CFG.greenColor
 },
 "#field" : {
 	height: Ti.UI.FILL,
 	right: 0,
-	width: '55%',
+	width: '35%',
 	font: {
-		fontSize: '16dp',
-		fontWeight: 'bold'
-	}
+		fontSize: Alloy.CFG.defaultFontSizeSmall,
+		fontFamily: Alloy.CFG.sansFont
+	},
+	color: Alloy.CFG.grayColor
 }

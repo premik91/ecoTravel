@@ -5,10 +5,10 @@ var titleLabel = Ti.UI.createLabel({
 	width: Ti.UI.FILL,
 	textAlign: 'center',
 	font: {
-		fontSize: '18',
-		fontWeight: 'bold'
+		fontSize: Alloy.CFG.defaultFontSize,
+		fontFamily: Alloy.CFG.serifFont
 	},
-	color: 'black'
+	color: Alloy.CFG.greenColor
 });
 var footerButton = Ti.UI.createButton({
 	height: Ti.UI.SIZE,
@@ -86,4 +86,8 @@ exports.getFiedById = function (id) {
 }
 exports.setDelegate = function(del) {
 	delegate = del;
+}
+
+exports.getTable = function() {
+	return table;
 }
