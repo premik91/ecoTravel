@@ -1,12 +1,11 @@
 // TODO: comment out or delete the bellow line when done testing
 // Ti.App.Properties.setString('jsonBatch', '');
 ////////////
-
 var args = arguments[0] || {};
 // Replace null with empty string
 if (Ti.App.Properties.getString('jsonBatch') == null) Ti.App.Properties.setString('jsonBatch', '');
 // Mark start of journey
-var start_journey_json = '{"journey": "' + args.transportType['transportTitle'] + '"},';
+var start_journey_json = '{"journey": "' + args.transportType['transportTitle'] + '", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
 Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);
 
 // Start following
@@ -26,15 +25,19 @@ function startFollow() {
 		} else {
 			var current_longitude = e.coords.longitude;
 			var current_latitude = e.coords.latitude;
+			// Is this the first point in trip
 			if (last_position_latitude == null) {
 				last_position_latitude = current_latitude;
 				last_position_longitude = current_longitude;
 				return;
 			}
+			// Are coordiantes the same as before
+			if (last_position_latitude == current_latitude && last_position_longitude == current_latitude) {
+				return;
+			}
 
 			var new_distance = getDistanceInKm(last_position_latitude, last_position_longitude, current_latitude, current_longitude);
 
-			// Ti.API.TFinfo(e);
 			distance += new_distance;
 			if (distance_in_meters) {
 				var meters = distance * 1000;
@@ -54,7 +57,7 @@ function startFollow() {
 			$.mapview.setLocation(region);
 
 			// Save position to batch
-			var position = '{"x":' + current_latitude + ',"y":' + current_longitude + ',"speed":' + e.coords.speed + ',"time":' + e.coords.timestamp + ',"km":' + new_distance + '},';
+			var position = '{"x":' + current_latitude + ',"y":' + current_longitude + ',"speed":' + e.coords.speed + ',"date":' + (e.coords.timestamp / 1000).toFixed(0) + ',"distance":' + new_distance + '},';
 			Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + position);
 
 			// Save last postion
@@ -88,7 +91,7 @@ function sendData() {
 		} else {
 			var data = Ti.App.Properties.getString('jsonBatch');
 			Ti.App.Properties.setString('jsonBatch', '');
-			// If there is no data return
+			// If there is no data break
 			if (data == '') return;
 			// Else send data to server
 			var json_data = '[' + data.slice(0, -1) + ']';
@@ -127,7 +130,7 @@ function Stopwatch() {
 function endJourney() {
 	clearInterval(send_data_interval);
 	// Mark end of journey
-	var end_journey_json = '{ "journey": "Stop" },';
+	var end_journey_json = '{ "journey": "Stop", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
 	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + end_journey_json);
 	sendData();
 	

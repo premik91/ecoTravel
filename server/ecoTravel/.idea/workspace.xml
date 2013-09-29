@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5db8eb7a-5e86-46df-a6f4-6d40a2324267" name="Default" comment="" />
+    <list default="true" id="5db8eb7a-5e86-46df-a6f4-6d40a2324267" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/backend/admin.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/backend/facebook.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravelmain_db" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ecoTravelTitanium/app/lib/FacebookUser.js" afterPath="$PROJECT_DIR$/../../ecoTravelTitanium/app/lib/FacebookUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ecoTravelTitanium/app/config.json" afterPath="$PROJECT_DIR$/../../ecoTravelTitanium/app/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/context_processors.py" afterPath="$PROJECT_DIR$/ecoTravel/context_processors.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ecoTravelTitanium/app/controllers/tabStatistics/default.js" afterPath="$PROJECT_DIR$/../../ecoTravelTitanium/app/controllers/tabStatistics/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ecoTravel.iml" afterPath="$PROJECT_DIR$/.idea/ecoTravel.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" afterPath="$PROJECT_DIR$/../../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/backend/models.py" afterPath="$PROJECT_DIR$/ecoTravel/backend/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/settings.py" afterPath="$PROJECT_DIR$/ecoTravel/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/testing.py" afterPath="$PROJECT_DIR$/ecoTravel/testing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/urls.py" afterPath="$PROJECT_DIR$/ecoTravel/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/backend/views.py" afterPath="$PROJECT_DIR$/ecoTravel/backend/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="ecoTravel.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/context_processors.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379433338857" ignored="false" />
-    <file path="/views.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379447975981" ignored="false" />
-    <file path="/urls.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379447515491" ignored="false" />
-    <file path="/facebook.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379447788186" ignored="false" />
-    <file path="/settings.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379447914440" ignored="false" />
+    <file path="/context_processors.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380392843744" ignored="false" />
+    <file path="/views.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380469848072" ignored="false" />
+    <file path="/urls.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380117082835" ignored="false" />
+    <file path="/facebook.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1379626813801" ignored="false" />
+    <file path="/settings.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380393054303" ignored="false" />
+    <file path="/Dummy.txt" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380467779444" ignored="false" />
+    <file path="/models.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380463762967" ignored="false" />
+    <file path="/admin.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380369546174" ignored="false" />
+    <file path="/testing.py" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380462056549" ignored="false" />
+    <file path="/requirements.txt" changelist="5db8eb7a-5e86-46df-a6f4-6d40a2324267" time="1380459979575" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +56,8 @@
       <file leaf-file-name="context_processors.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="16" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state line="12" column="12" selection-start="261" selection-end="268" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,47 +65,18 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="25" selection-start="721" selection-end="721" vertical-scroll-proportion="0.62240666">
+            <state line="195" column="43" selection-start="7652" selection-end="7652" vertical-scroll-proportion="0.69135803">
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecoTravel/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="18" selection-start="4048" selection-end="4048" vertical-scroll-proportion="-4.269231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="facebook.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/backend/facebook.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="557" column="17" selection-start="19922" selection-end="19922" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1409#1419#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="87" selection-start="2307" selection-end="2318" vertical-scroll-proportion="0.0">
+            <state line="39" column="12" selection-start="1160" selection-end="1161" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,10 +85,8 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="82" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state line="24" column="54" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,15 +98,27 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ecoTravel/context_processors.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/ecoTravel/main.js" />
-        <option value="$PROJECT_DIR$/ecoTravel/urls.py" />
         <option value="$PROJECT_DIR$/ecoTravel/facebook_api/facebook.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/backend/facebook.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/backend/admin.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/urls.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/context_processors.py" />
         <option value="$PROJECT_DIR$/ecoTravel/settings.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/ecoTravel/backend/models.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/testing.py" />
         <option value="$PROJECT_DIR$/ecoTravel/backend/views.py" />
       </list>
     </option>
@@ -124,7 +128,7 @@
     <option name="width" value="1440" />
     <option name="height" value="874" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -150,13 +154,90 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ecoTravel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e_ordering" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -203,15 +284,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../e_ordering" />
+    <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -219,6 +311,65 @@
     </key>
   </component>
   <component name="RunManager" selected="Django server.ecoTravel">
+    <configuration default="false" name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ecoTravel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ecoTravel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ecoTravel/testing.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ecoTravel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ecoTravel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -288,11 +439,34 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Django server.ecoTravel" />
+      <item index="1" class="java.lang.String" itemvalue="Python.testing" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.testing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5db8eb7a-5e86-46df-a6f4-6d40a2324267" name="Default" comment="" />
@@ -302,26 +476,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24892396" sideWeight="0.67639256" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.69893897" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32360741" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.301061" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -382,69 +556,99 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ecoTravel/testing.py">
+    <entry file="file://$PROJECT_DIR$/../../../e_ordering/e_ordering/services/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="25" column="57" selection-start="719" selection-end="753" vertical-scroll-proportion="0.26200873" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/../../../e_ordering/e_ordering/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="89" column="26" selection-start="3613" selection-end="3613" vertical-scroll-proportion="1.8995633" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../e_ordering/e_ordering/users/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="122" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../e_ordering/e_ordering/frontend/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="659" selection-end="659" vertical-scroll-proportion="137.6" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../e_ordering/e_ordering/users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="33" selection-start="2694" selection-end="2728" vertical-scroll-proportion="-9.0" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Applications/django-trunk/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="466" column="0" selection-start="1017" selection-end="19468" vertical-scroll-proportion="13.53913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../web_site/ecoTravel-source/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.17995444" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="87" selection-start="2307" selection-end="2318" vertical-scroll-proportion="0.0">
+        <state line="4" column="416" selection-start="211" selection-end="597" vertical-scroll-proportion="0.033407573" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/backend/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="26" selection-start="231" selection-end="231" vertical-scroll-proportion="0.16233766" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="27" selection-end="27" vertical-scroll-proportion="0.06012024">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="82" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/backend/facebook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="557" column="17" selection-start="19922" selection-end="19922" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1409#1419#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="16" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state line="12" column="12" selection-start="261" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="18" selection-start="4048" selection-end="4048" vertical-scroll-proportion="-4.269231">
+        <state line="11" column="26" selection-start="197" selection-end="197" vertical-scroll-proportion="0.33066133" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="54" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/backend/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="12" selection-start="1160" selection-end="1161" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="25" selection-start="721" selection-end="721" vertical-scroll-proportion="0.62240666">
+        <state line="195" column="43" selection-start="7652" selection-end="7652" vertical-scroll-proportion="0.69135803">
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>

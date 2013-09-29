@@ -22,7 +22,7 @@ function refreshXHRData(ptr) {
 		Ti.API.TFinfo(e);
 		if (ptr && ptr.hide) ptr.hide();
 	}, function(e) {
-		Ti.API.TFinfo('Success failed');
+		Ti.API.TFinfo('Refreshing failed');
 		Ti.API.TFinfo(e);
 		if (ptr && ptr.hide) ptr.hide();		
 	});
@@ -32,15 +32,15 @@ function refreshXHRData(ptr) {
 function refreshStatViewData(e) {
 	user = Alloy.Globals.FBUser.getCurrentUserStats();
 	$.name.text = user['name'];
-	$.points.text = 'CO₂ released: ' + (user['total']/1000).toFixed(2) + ' kg';
-	$.distance.text = 'Distance traveled: ' + user['km'].toFixed(2) + ' km';
-	$.co2saved.text = 'CO₂ saved: ' + (user['saved']/1000).toFixed(2) + ' kg';
+	$.points.text = 'CO₂ released: ' + (user['total']/1000) + ' kg';
+	$.distance.text = 'Distance traveled: ' + user['distance'] + ' km';
+	$.co2saved.text = 'CO₂ saved: ' + (user['saved']/1000) + ' kg';
 	$.userImage.setImage(Alloy.Globals.FBUser.getCurrentUserPicture());
 
 	var tableData = [];
 	var i = 0;
-	for (var transport_name in user['modes']) {
-		var transport = user['modes'][transport_name];
+	for (var transport_name in user['travel_types']) {
+		var transport = user['travel_types'][transport_name];
 		var row = Ti.UI.createTableViewRow({
 			className : 'transportRow',
 			selectedBackgroundColor : 'white',
@@ -85,7 +85,7 @@ function refreshStatViewData(e) {
 		// Add all data for each transport type
 		var results = ['km', 'total'];
 		var resultsText = [
-			'You made ' + 100 + ' km.', 
+			'You made ' + transport['distance'] + ' km.', 
 			'You made ' + transport['total'] +'kg CO₂.',
 		];
 		var resultsIcons = ['road.png', 'fire.png'];

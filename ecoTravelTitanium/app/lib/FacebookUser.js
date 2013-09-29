@@ -1,6 +1,6 @@
 var fbModule = require('facebook');
 fbModule.appid = Alloy.CFG.appId;
-//fb.permissions = [FACEBOOK_APP_PERMISSIONS];
+fbModule.permissions = ['email'];
 fbModule.forceDialogAuth = true;
 
 var accessToken;
@@ -38,7 +38,7 @@ var checkFB = function() {
 var loginToServer = function(successCallback, errorCallback) {
 	Alloy.Globals.XHR.post(Alloy.CFG.site_url + "user/login/" + fbModule.accessToken, {}, function(e) {
 		Ti.API.TFinfo("Logged in to server!");
-		Ti.API.TFinfo(""+e);
+		Ti.API.TFinfo(""+e.data);
 		refreshTransportTypes();
 		//refreshCurrentUserProfile();
 		if (successCallback)
@@ -66,7 +66,7 @@ var getCurrentUserProfile = function() {
 var refreshCurrentUserProfile = function() {
 	fbModule.requestWithGraphPath('me', {}, 'GET', function(e) {
     	if (e.success) {
-        	alert(e.result);
+        	alert(e.mail);
     	} else if (e.error) {
 	        alert(e.error);
 	    } else {
@@ -109,7 +109,7 @@ var getCurrentUserFriends = function() {
 
 // Get transport type
 var refreshTransportTypes = function () {
-	Alloy.Globals.XHR.get(Alloy.CFG.site_url + 'api/modes/', function(e) {
+	Alloy.Globals.XHR.get(Alloy.CFG.site_transport_modes_url, function(e) {
 		Ti.API.TFinfo('Transport types returned successfully.') + e;
 		transportTypes = JSON.parse(e.data);
 	}, function(e) {
