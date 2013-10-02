@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../e_ordering/.idea/e-ordering.iml" filepath="$PROJECT_DIR$/../../../e_ordering/.idea/e-ordering.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ecoTravel.iml" filepath="$PROJECT_DIR$/.idea/ecoTravel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../web_site/ecoTravel-source/.idea/ecoTravel-source.iml" filepath="$PROJECT_DIR$/../../web_site/ecoTravel-source/.idea/ecoTravel-source.iml" />
     </modules>
   </component>
 </project>

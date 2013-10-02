@@ -81,7 +81,7 @@ var getCurrentUserStats = function() {
 
 var refreshCurrentUserStats = function(onSuccess, onError) {
 	Ti.API.TFinfo("Refreshing current user stats");
-	Alloy.Globals.XHR.get(Alloy.CFG.site_url+"user/summary", function(e) {
+	Alloy.Globals.XHR.get(Alloy.CFG.site_url+"user/summary/", function(e) {
 		currentUserStats = JSON.parse(e.data);
 		Ti.API.TFinfo("Refreshed current user stats");		
 		if (onSuccess) onSuccess(e);
@@ -93,7 +93,7 @@ var refreshCurrentUserStats = function(onSuccess, onError) {
 
 var refreshCurrentUserFriends = function(onSuccess, onError) {
 	Ti.API.TFinfo("Getting current user friends");
-	Alloy.Globals.XHR.get(Alloy.CFG.site_url+"user/friends", function(e) {
+	Alloy.Globals.XHR.get(Alloy.CFG.site_url+"user/friends/", function(e) {
 		Ti.API.TFinfo("Got current user friends");		
 		currentUserFriends = JSON.parse(e.data);
 		if (onSuccess) onSuccess(e);

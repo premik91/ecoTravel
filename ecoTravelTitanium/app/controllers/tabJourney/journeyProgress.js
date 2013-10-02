@@ -4,6 +4,7 @@
 var args = arguments[0] || {};
 // Replace null with empty string
 if (Ti.App.Properties.getString('jsonBatch') == null) Ti.App.Properties.setString('jsonBatch', '');
+Ti.App.Properties.setString('jsonBatch', '');
 // Mark start of journey
 var start_journey_json = '{"journey": "' + args.transportType['transportTitle'] + '", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
 Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);

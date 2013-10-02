@@ -32,9 +32,9 @@ function refreshXHRData(ptr) {
 function refreshStatViewData(e) {
 	user = Alloy.Globals.FBUser.getCurrentUserStats();
 	$.name.text = user['name'];
-	$.points.text = 'CO₂ released: ' + (user['total']/1000) + ' kg';
+	$.points.text = 'CO₂ released: ' + (user['total']) + ' kg';
 	$.distance.text = 'Distance traveled: ' + user['distance'] + ' km';
-	$.co2saved.text = 'CO₂ saved: ' + (user['saved']/1000) + ' kg';
+	$.co2saved.text = 'CO₂ saved: ' + (user['saved']) + ' kg';
 	$.userImage.setImage(Alloy.Globals.FBUser.getCurrentUserPicture());
 
 	var tableData = [];

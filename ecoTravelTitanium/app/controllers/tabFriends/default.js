@@ -26,8 +26,8 @@ function refreshFriendsViewData() {
 	// Add all friends to list
 	var i = 0;
 	for (friend in friends) {
-		var information = friends[friend][1] + 'kg CO₂ savings.';
-		var friend = { name: {text: friends[friend][0]}, info: {text: information}, pic: {image: 'images/user.png'}, properties : {
+		var information = friends[friend]['saved'] + 'kg CO₂ savings.';
+		var friend = { name: {text: friends[friend]['name']}, info: {text: information}, pic: {image: "https://graph.facebook.com/"+friends[friend]['facebook_id']+"/picture?width=100&height=100"}, properties : {
 	            itemId: i++,
 	            accessoryType: Titanium.UI.LIST_ACCESSORY_TYPE_DETAIL,
 	        }};

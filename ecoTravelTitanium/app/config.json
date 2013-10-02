@@ -21,9 +21,9 @@
 		"nl.fokkezb.pullToRefresh":"1.4",
 		"ti.pedro.forms": "1.0"		
 	},
-	"site_url": "http://127.0.0.1:8000/",
-	"site_batch_url": "http://127.0.0.1:8000/trip/batch/",
-	"site_transport_modes_url": "http://127.0.0.1:8000/api/travel/types/",
+	"site_url": "http://localhost:8080/",
+	"site_batch_url": "http://localhost:8080/trip/batch/",
+	"site_transport_modes_url": "http://localhost:8080/api/travel/types/",
 	"send_data_seconds": 15,
 	"appId": 164880290381042,
 	"twitterConsumerKey": "RMuWGYKB42uNCZLnrfmtMg",
