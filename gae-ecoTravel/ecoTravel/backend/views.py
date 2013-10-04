@@ -15,7 +15,7 @@ from libs import requests, pytz
 
 
 class JourneyMap(generic_views.TemplateView):
-    template_name = 'map_test.html'
+    template_name = 'journey_map.html'
 
     def get(self, request, *args, **kwargs):
         return super(JourneyMap, self).get(request, *args, **kwargs)
@@ -120,7 +120,6 @@ def UserLogin(request, facebook_token):
 def JourneyBatch(request):
     user = User.all().filter('facebook_id', request.session['facebook_id']).get()
 
-    # Ignore repeats
     for point in json.loads(request.body):
         # Date sent
         date = datetime.fromtimestamp(int(point['date']))

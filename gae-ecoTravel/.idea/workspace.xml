@@ -2,13 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="100eca50-a284-43ac-ace8-a79901134007" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/templates/map_test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/config.json" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabJourney/journeyProgress.xml" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabJourney/journeyProgress.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/settings.py" afterPath="$PROJECT_DIR$/ecoTravel/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/urls.py" afterPath="$PROJECT_DIR$/ecoTravel/urls.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/basic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/context_menu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/custom_controls.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/elevation_locations.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/elevation_routes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/examples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/fusion_tables.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/geocoding.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/geofences.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/geolocation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/geometry.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/kml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/layers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/layers_places.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/map_events.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/map_types.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/marker_clusterer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/markers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/overlay_map_types.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/overlays.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polygons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polylines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes_advanced.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/static.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/static_markers.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/static_polylines.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/styled_maps.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/travel_route.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.controls.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.events.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.geofences.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.geometry.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.layers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.map_types.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.markers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.native_extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.overlays.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.static.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.streetview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.styles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/lib/gmaps.utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/lib/jasmine-html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/lib/jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/lib/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/EventSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/GeometrySpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/LayerSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/MapSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/MarkerSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/OverlaySpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/RouteSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/StreetViewSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/spec/StyleSpec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/test/template/jasmine-gmaps.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ecoTravel/templates/map_test.html" afterPath="$PROJECT_DIR$/ecoTravel/templates/journey_map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/backend/views.py" afterPath="$PROJECT_DIR$/ecoTravel/backend/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -16,8 +75,8 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/start_script.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380562901894" ignored="false" />
     <file path="/a.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380562963067" ignored="false" />
-    <file path="/Dummy.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380896592654" ignored="false" />
-    <file path="/views.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380921577438" ignored="false" />
+    <file path="/Dummy.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380929240424" ignored="false" />
+    <file path="/views.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380929274795" ignored="false" />
     <file path="/requirements.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380565016273" ignored="false" />
     <file path="/models.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380655086484" ignored="false" />
     <file path="/context_processors.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380700745387" ignored="false" />
@@ -57,21 +116,17 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="38" selection-start="5202" selection-end="5202" vertical-scroll-proportion="-1.34375">
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state line="11" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.22664835">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map_test.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/templates/map_test.html">
+      <file leaf-file-name="journey_map.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecoTravel/templates/journey_map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="-10.25">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +219,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,15 +265,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gmaps" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,26 +294,23 @@
               <option name="myItemId" value="gmaps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/ecoTravel" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/ecoTravel" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -385,6 +428,13 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="false" name="eco-travel-gae" type="Python.AppEngineServer" factoryName="App Engine server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -447,7 +497,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27259684" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -525,53 +575,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="15" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="15" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="12" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="12" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/frontend/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="8" selection-start="1008" selection-end="1435" vertical-scroll-proportion="0.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes_advanced.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="35" selection-start="1639" selection-end="1641" vertical-scroll-proportion="1.455982">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.101580136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polygons.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="20" selection-start="3313" selection-end="3313" vertical-scroll-proportion="0.6094808">
-          <folding />
-        </state>
+        <state line="29" column="8" selection-start="1008" selection-end="1435" vertical-scroll-proportion="0.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="2548" selection-end="2976" vertical-scroll-proportion="0.25">
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="89" column="0" selection-start="2548" selection-end="2976" vertical-scroll-proportion="0.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
@@ -583,23 +602,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/templates/frontend/kolosej.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6973684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/markers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="699" selection-end="699" vertical-scroll-proportion="0.20316027">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6973684" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="42" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.5">
-          <folding />
-        </state>
+        <state line="51" column="42" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
@@ -616,28 +624,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polylines.html">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/templates/journey_map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="9" selection-start="776" selection-end="776" vertical-scroll-proportion="0.6772009">
+        <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/templates/map_test.html">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/gmaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="-10.25">
+        <state line="6" column="3" selection-start="130" selection-end="130" vertical-scroll-proportion="0.12587413">
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="38" selection-start="5202" selection-end="5202" vertical-scroll-proportion="-1.34375">
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state line="11" column="24" selection-start="365" selection-end="365" vertical-scroll-proportion="0.22664835">
+          <folding />
         </state>
       </provider>
     </entry>
