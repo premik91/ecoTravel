@@ -1,26 +1,35 @@
-// TODO: comment out or delete the bellow line when done testing
-// Ti.App.Properties.setString('jsonBatch', '');
-////////////
-var args = arguments[0] || {};
-// Replace null with empty string
-if (Ti.App.Properties.getString('jsonBatch') == null) Ti.App.Properties.setString('jsonBatch', '');
-Ti.App.Properties.setString('jsonBatch', '');
-// Mark start of journey
-var start_journey_json = '{"journey": "' + args.transportType['transportTitle'] + '", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
-Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);
-
-// Start following
-startFollow();
-// Send current batch every X seconds
-var send_data_interval = setInterval(sendData, Alloy.CFG.send_data_seconds * 1000);
+var sendDataInterval, stopWatchInterval, getLocationInterval;
+var last_position_latitude, last_position_longitude;
+var distance, distance_in_meters;
+var travelType;
+function onFocus() {
+	distance = 0.0;
+	last_position_latitude = null;
+	last_position_longitude = null;
+	distance_in_meters = true;
+	
+	travelType = Ti.App.Properties.getString('travelType');
+	// Replace null with empty string
+	if (Ti.App.Properties.getString('jsonBatch') == null) Ti.App.Properties.setString('jsonBatch', '');
+	Ti.App.Properties.setString('jsonBatch', ''); // TODO: Delete this when done debugging
+	// Mark start of journey
+	var start_journey_json = '{"journey": "' + travelType + '", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
+	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);
+	
+	// Start following
+	startFollow();
+	// Send current batch every X seconds
+	sendDataInterval = setInterval(sendData, Alloy.CFG.send_data_seconds * 1000);
+}
 
 // --------------------------- User position handling ---------------------------
-var last_position_latitude, last_position_longitude;
-var distance = 0.0;
-var distance_in_meters = true;
 function startFollow() {
-	setInterval(Stopwatch, 100);
-	Ti.Geolocation.addEventListener('location', function(e) {
+	stopWatchInterval = setInterval(Stopwatch, 100);
+	getLocationInterval = setInterval(getLocation, Alloy.CFG.checkLocationSeconds * 1000);
+}
+
+function getLocation () {
+	Titanium.Geolocation.getCurrentPosition(function(e){
 		if (e.error) {
 			Ti.API.error('Error: ' + e.error);
 		} else {
@@ -32,13 +41,18 @@ function startFollow() {
 				last_position_longitude = current_longitude;
 				return;
 			}
+			
 			// Are coordiantes the same as before
-			if (last_position_latitude == current_latitude && last_position_longitude == current_latitude) {
+			if (Number(last_position_latitude) === Number(current_latitude) && Number(last_position_longitude) === Number(current_longitude)) {
 				return;
 			}
 
 			var new_distance = getDistanceInKm(last_position_latitude, last_position_longitude, current_latitude, current_longitude);
-
+			// If distance beetween points is less than 10 meters
+			if (new_distance < 0.010) {
+				return;
+			}
+			
 			distance += new_distance;
 			if (distance_in_meters) {
 				var meters = distance * 1000;
@@ -129,7 +143,7 @@ function Stopwatch() {
 }
 
 function endJourney() {
-	clearInterval(send_data_interval);
+	Ti.Geolocation.removeEventListener('location', stopFollowing);
 	// Mark end of journey
 	var end_journey_json = '{ "journey": "Stop", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
 	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + end_journey_json);
@@ -137,7 +151,7 @@ function endJourney() {
 	
 	// Open end journey page
 	var endJourney = Alloy.createController('tabJourney/endJourney', {
-		'transportType' : args.transportType,
+		'travelType' : travelType,
 		'journeyTime': $.journeyTime.text, 
 		'journeyDistance': distance
 	}).getView();
@@ -146,4 +160,9 @@ function endJourney() {
 		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
 	});
 	$.journeyProgress.close();	
+}
+
+function stopFollowing(){
+	clearInterval(sendDataInterval);
+	clearInterval(stopWatchInterval);
 }

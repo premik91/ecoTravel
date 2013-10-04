@@ -2,51 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="100eca50-a284-43ac-ace8-a79901134007" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../server/ecoTravel/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/backend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/gaesessions/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/context_processors.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gae-ecoTravel.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/backend/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/backend/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/ecoTravel/main_db" afterPath="$PROJECT_DIR$/../server/ecoTravel/main_db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/lib/FacebookUser.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/lib/FacebookUser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ecoTravel/templates/map_test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.yaml" afterPath="$PROJECT_DIR$/app.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/config.json" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabFriends/default.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabFriends/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabStatistics/default.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabStatistics/default.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/ecoTravel/.idea/ecoTravel.iml" afterPath="$PROJECT_DIR$/../server/ecoTravel/.idea/ecoTravel.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabFriends/friend.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabFriends/friend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabFriends/friend.xml" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabFriends/friend.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/controllers/tabJourney/journeyProgress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/ecoTravel/.idea/modules.xml" afterPath="$PROJECT_DIR$/../server/ecoTravel/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/ecoTravel/requirements.txt" afterPath="$PROJECT_DIR$/../server/ecoTravel/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/ecoTravel/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../server/ecoTravel/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabJourney/journeyProgress.xml" afterPath="$PROJECT_DIR$/../ecoTravelTitanium/app/views/tabJourney/journeyProgress.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/settings.py" afterPath="$PROJECT_DIR$/ecoTravel/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/urls.py" afterPath="$PROJECT_DIR$/ecoTravel/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecoTravel/backend/views.py" afterPath="$PROJECT_DIR$/ecoTravel/backend/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gae-ecoTravel.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/start_script.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380562901894" ignored="false" />
     <file path="/a.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380562963067" ignored="false" />
-    <file path="/Dummy.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380712543421" ignored="false" />
-    <file path="/views.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380714566773" ignored="false" />
+    <file path="/Dummy.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380896592654" ignored="false" />
+    <file path="/views.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380921577438" ignored="false" />
     <file path="/requirements.txt" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380565016273" ignored="false" />
     <file path="/models.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380655086484" ignored="false" />
     <file path="/context_processors.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380700745387" ignored="false" />
-    <file path="/settings.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380653909839" ignored="false" />
+    <file path="/settings.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380906433594" ignored="false" />
     <file path="/testsss.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380700595410" ignored="false" />
+    <file path="/map_test.html" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380921365346" ignored="false" />
+    <file path="/urls.py" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380904735209" ignored="false" />
+    <file path="/app.yaml" changelist="100eca50-a284-43ac-ace8-a79901134007" time="1380906869693" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,16 +48,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="45" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testsss.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsss.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="87" selection-end="217" vertical-scroll-proportion="0.0">
+            <state line="23" column="0" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +57,7 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="27" selection-start="6910" selection-end="6910" vertical-scroll-proportion="0.40625">
+            <state line="135" column="38" selection-start="5202" selection-end="5202" vertical-scroll-proportion="-1.34375">
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -95,11 +65,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context_processors.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
+      <file leaf-file-name="map_test.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecoTravel/templates/map_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="-10.25">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,16 +79,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ecoTravel/backend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="38" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="17" selection-start="1551" selection-end="1569" vertical-scroll-proportion="0.0">
+            <state line="35" column="8" selection-start="940" selection-end="944" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,11 +106,13 @@
         <option value="$PROJECT_DIR$/requests/utils.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/libs/gaesessions/__init__.py" />
-        <option value="$PROJECT_DIR$/ecoTravel/settings.py" />
         <option value="$PROJECT_DIR$/ecoTravel/backend/models.py" />
         <option value="$PROJECT_DIR$/testsss.py" />
-        <option value="$PROJECT_DIR$/ecoTravel/urls.py" />
         <option value="$PROJECT_DIR$/ecoTravel/context_processors.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/urls.py" />
+        <option value="$PROJECT_DIR$/ecoTravel/settings.py" />
+        <option value="$PROJECT_DIR$/app.yaml" />
+        <option value="$PROJECT_DIR$/ecoTravel/templates/map_test.html" />
         <option value="$PROJECT_DIR$/ecoTravel/backend/views.py" />
       </list>
     </option>
@@ -199,6 +164,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,20 +193,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae-ecoTravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gae-ecoTravel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ecoTravel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -259,25 +211,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmaps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gae-ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gae-ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecoTravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gmaps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/ecoTravel" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -292,11 +282,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/ecoTravel" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ecoTravel/static/plugins" />
+      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/dependencies/lib" />
     </key>
   </component>
   <component name="RunManager" selected="App Engine server.eco-travel-gae">
@@ -457,7 +447,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26398852" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.6719577" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -533,98 +523,118 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/pytz/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="18" selection-start="143" selection-end="143" vertical-scroll-proportion="0.18828452" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/pytz/reference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.1736403" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/requests/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="13" selection-end="13" vertical-scroll-proportion="0.031380754">
+        <state line="2" column="15" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="13" column="12" selection-start="299" selection-end="299" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/frontend/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.21966527" />
+        <state line="29" column="8" selection-start="1008" selection-end="1435" vertical-scroll-proportion="0.25">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes_advanced.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="48" column="35" selection-start="1639" selection-end="1641" vertical-scroll-proportion="1.455982">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/gaesessions/__init__.py">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/routes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="717" selection-end="719" vertical-scroll-proportion="0.032119915" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.101580136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polygons.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="20" selection-start="3313" selection-end="3313" vertical-scroll-proportion="0.6094808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="2548" selection-end="2976" vertical-scroll-proportion="0.25">
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="10" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../premik91.com/premik91/templates/frontend/kolosej.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.6973684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/markers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="699" selection-end="699" vertical-scroll-proportion="0.20316027">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="17" selection-start="1551" selection-end="1569" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testsss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="87" selection-end="217" vertical-scroll-proportion="0.0">
+        <state line="51" column="42" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+        <state line="23" column="0" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/backend/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="38" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+        <state line="35" column="8" selection-start="940" selection-end="944" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecoTravel/context_processors.py">
+    <entry file="file://$PROJECT_DIR$/ecoTravel/static/plugins/gmaps/examples/polylines.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
+        <state line="20" column="9" selection-start="776" selection-end="776" vertical-scroll-proportion="0.6772009">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecoTravel/templates/map_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="15" selection-start="1510" selection-end="1510" vertical-scroll-proportion="-10.25">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ecoTravel/backend/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="27" selection-start="6910" selection-end="6910" vertical-scroll-proportion="0.40625">
+        <state line="135" column="38" selection-start="5202" selection-end="5202" vertical-scroll-proportion="-1.34375">
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

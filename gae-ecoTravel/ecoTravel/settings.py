@@ -48,6 +48,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'ecoTravel.urls'
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+)
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
+
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 LANGUAGE_CODE = 'en-us'

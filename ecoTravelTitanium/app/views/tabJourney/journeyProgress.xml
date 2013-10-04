@@ -1,5 +1,5 @@
 <Alloy>
-	<Window id="journeyProgress" class="container" title="Journey Progress" layout="vertical">
+	<Window id="journeyProgress" class="container" title="Journey Progress" layout="vertical" onFocus="onFocus">
 		<View layout="vertical" height="88%">
 			<Label id="journeyTime">00:00:00</Label>
 			<Label id="journeyDistance">0 meters</Label>

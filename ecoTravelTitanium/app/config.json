@@ -22,9 +22,10 @@
 		"ti.pedro.forms": "1.0"		
 	},
 	"site_url": "http://localhost:8080/",
-	"site_batch_url": "http://localhost:8080/trip/batch/",
+	"site_batch_url": "http://localhost:8080/journey/batch/",
 	"site_transport_modes_url": "http://localhost:8080/api/travel/types/",
 	"send_data_seconds": 15,
+	"checkLocationSeconds": 2,
 	"appId": 164880290381042,
 	"twitterConsumerKey": "RMuWGYKB42uNCZLnrfmtMg",
 	"twitterConsumerSecret": "R2eQ7vzQidmVOKEnN08kOjOx6VwaNss3uY4f094hU",

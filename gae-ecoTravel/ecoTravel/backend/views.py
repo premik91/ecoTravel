@@ -1,6 +1,5 @@
 import json
 import logging
-from random import randrange
 from datetime import datetime
 
 from django.http import HttpResponse
@@ -9,11 +8,25 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from google.appengine.ext import db
 from google.appengine.ext.db import to_dict
-import time
 
 from ecoTravel.backend.models import TravelType, User, Journey, Point
 from ecoTravel.context_processors import save_to_database
 from libs import requests, pytz
+
+
+class JourneyMap(generic_views.TemplateView):
+    template_name = 'map_test.html'
+
+    def get(self, request, *args, **kwargs):
+        return super(JourneyMap, self).get(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(JourneyMap, self).get_context_data(**kwargs)
+        journey = Journey.get_by_id(long(kwargs['journey_id']))
+        context.update({
+            'journey_points': Point.all().filter('journey', journey).order('-time'),
+        })
+        return context
 
 
 class GetTravelTypes(generic_views.View):
@@ -63,6 +76,7 @@ class GetUserSummary(generic_views.View):
         #     db.delete(point.key())
         # for journey in Journey.all():
         #     db.delete(journey.key())
+        # del request.session['facebook_id']
         user = User.all().filter('facebook_id', request.session['facebook_id']).get()
         user_json = create_user_json(user)
         return HttpResponse(json.dumps(user_json), content_type="application/json")
@@ -103,8 +117,10 @@ def UserLogin(request, facebook_token):
 
 @require_http_methods('POST')
 @csrf_exempt
-def TripBatch(request):
+def JourneyBatch(request):
     user = User.all().filter('facebook_id', request.session['facebook_id']).get()
+
+    # Ignore repeats
     for point in json.loads(request.body):
         # Date sent
         date = datetime.fromtimestamp(int(point['date']))
@@ -177,13 +193,12 @@ def create_user_json(user):
         total_distance += distance
         total_saved += travel_type['saved']
         total_co2 += travel_type['total']
-
     # Create json
     user_json = {
         'facebook_id': user.facebook_id,
         'name': '{0} {1}'.format(user.first_name, user.last_name),
         'total': total_co2,
-        'saved': total_saved,
+        'saved': round(total_saved, 3),
         'distance': round(total_distance, 3),
         'travel_types': user_travel_types
     }

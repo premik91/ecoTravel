@@ -29,7 +29,8 @@ function buttonClick (e) {
 	    alert('Please enable location services');
 	    return false;
 	} else {
-		var startJourney = Alloy.createController('tabJourney/journeyProgress', {'transportType': e.source}).getView();  	
+		Ti.App.Properties.setString('travelType', e.source['transportTitle']);
+		var startJourney = Alloy.createController('tabJourney/journeyProgress', {}).getView();  	
 	   	startJourney.open({
 			modal: false,
 			modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL

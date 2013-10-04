@@ -1,14 +1,14 @@
 // https://github.com/viezel/TiSocial.Framework
 // v 1.7.0
 var args = arguments[0] || {};
-var currentTransport = Alloy.Globals.FBUser.getTransportTypes()[args.transportType['transportTitle'].toLowerCase()];
+var currentTransport = Alloy.Globals.FBUser.getTransportTypes()[args.travelType.toLowerCase()];
 // Get CO2 saving per killometer
 var savings = Alloy.Globals.FBUser.getTransportTypes()['AVG'] - currentTransport;
 savings *= args.journeyDistance;
 
 var resultsShare = 'I just saved {0} CO2 by {1} {2}km with ecoTravel. \n Hooray for alternative means of travel!'.format(
 	savings,
-	args.transportType['transportTitle'],
+	Ti.App.Properties.getString('travelType'),
 	args.journeyDistance
 );
 // Show statistics

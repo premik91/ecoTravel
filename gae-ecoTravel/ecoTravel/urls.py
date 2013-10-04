@@ -18,5 +18,6 @@ urlpatterns = patterns(
     url(r'^user/summary/$', frontend_views.GetUserSummary.as_view(), name='user_summary'),
 
     # Trip
-    url(r'^trip/batch/$', frontend_views.TripBatch, name='trip_batch'),
+    url(r'^journey/batch/$', frontend_views.JourneyBatch, name='journey_batch'),
+    url(r'^journey/map/(?P<journey_id>\w+)$', frontend_views.JourneyMap.as_view(), name='journey_map'),
 )
