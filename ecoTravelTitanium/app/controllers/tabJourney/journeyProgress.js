@@ -17,17 +17,13 @@ function onFocus() {
 	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + start_journey_json);
 	
 	// Start following
-	startFollow();
+	stopWatchInterval = setInterval(Stopwatch, 100);
+	getLocationInterval = setInterval(getLocation, Alloy.CFG.checkLocationSeconds * 1000);
 	// Send current batch every X seconds
 	sendDataInterval = setInterval(sendData, Alloy.CFG.send_data_seconds * 1000);
 }
 
 // --------------------------- User position handling ---------------------------
-function startFollow() {
-	stopWatchInterval = setInterval(Stopwatch, 100);
-	getLocationInterval = setInterval(getLocation, Alloy.CFG.checkLocationSeconds * 1000);
-}
-
 function getLocation () {
 	Titanium.Geolocation.getCurrentPosition(function(e){
 		if (e.error) {
@@ -143,7 +139,9 @@ function Stopwatch() {
 }
 
 function endJourney() {
-	Ti.Geolocation.removeEventListener('location', stopFollowing);
+	clearInterval(getLocationInterval);
+	clearInterval(sendDataInterval);
+	clearInterval(stopWatchInterval);
 	// Mark end of journey
 	var end_journey_json = '{ "journey": "Stop", "date":"' + (new Date().getTime() / 1000).toFixed(0)  + '"},';
 	Ti.App.Properties.setString('jsonBatch', Ti.App.Properties.getString('jsonBatch') + end_journey_json);
@@ -160,9 +158,4 @@ function endJourney() {
 		modalTransitionStyle: Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL
 	});
 	$.journeyProgress.close();	
-}
-
-function stopFollowing(){
-	clearInterval(sendDataInterval);
-	clearInterval(stopWatchInterval);
 }

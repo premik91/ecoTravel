@@ -25,6 +25,7 @@ class Journey(db.Model):
     travel_type = db.ReferenceProperty(TravelType)
     start_date = db.DateTimeProperty(auto_now_add=True)
     end_date = db.DateTimeProperty(auto_now_add=True)
+    distance = db.FloatProperty(default=0.0)
 
 
 class Point(db.Model):

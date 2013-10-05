@@ -1,9 +1,9 @@
 // https://github.com/viezel/TiSocial.Framework
 // v 1.7.0
 var args = arguments[0] || {};
-var currentTransport = Alloy.Globals.FBUser.getTransportTypes()[args.travelType.toLowerCase()];
+var currentTransport = Alloy.Globals.FBUser.getTransportTypes()[args.travelType];
 // Get CO2 saving per killometer
-var savings = Alloy.Globals.FBUser.getTransportTypes()['AVG'] - currentTransport;
+var savings = Alloy.Globals.FBUser.getTransportTypes()['Average'] - currentTransport;
 savings *= args.journeyDistance;
 
 var resultsShare = 'I just saved {0} CO2 by {1} {2}km with ecoTravel. \n Hooray for alternative means of travel!'.format(
@@ -13,8 +13,8 @@ var resultsShare = 'I just saved {0} CO2 by {1} {2}km with ecoTravel. \n Hooray 
 );
 // Show statistics
 $.journeyTime.text = 'All travel time {0}'.format(args.journeyTime);
-$.journeySavings.text = 'I just saved {0} CO2'.format(savings);
-$.journeyDistance.text = 'I made {0} km'.format(args.journeyDistance);
+$.journeySavings.text = 'I just saved {0} CO2'.format(savings.toFixed(2));
+$.journeyDistance.text = 'I made {0} km'.format(args.journeyDistance.toFixed(2));
 
 function finishJourney() {
 	$.endJourney.close();

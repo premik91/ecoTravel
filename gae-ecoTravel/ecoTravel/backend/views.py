@@ -23,9 +23,11 @@ class JourneyMap(generic_views.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(JourneyMap, self).get_context_data(**kwargs)
         journey = Journey.get_by_id(long(kwargs['journey_id']))
-        context.update({
-            'journey_points': Point.all().filter('journey', journey).order('-time'),
-        })
+        points = Point.all().filter('journey', journey)
+        if points.count() > 0:
+            context.update({
+                'journey_points': points.order('-time'),
+            })
         return context
 
 
@@ -122,8 +124,7 @@ def JourneyBatch(request):
 
     for point in json.loads(request.body):
         # Date sent
-        date = datetime.fromtimestamp(int(point['date']))
-        date = date.replace(tzinfo=pytz.UTC)
+        date = datetime.fromtimestamp(int(point['date'])).replace(tzinfo=pytz.UTC)
         if 'journey' in point:
             if point['journey'] != 'Stop':
                 journey = Journey(
@@ -162,6 +163,7 @@ def create_user_json(user):
     :param user: User
     :return: json
     """
+    create_journey_distances(user)
     user_travel_types = {}
     # Compute total distances for each travel type
     for journey in Journey.all().filter('user', user):
@@ -175,12 +177,10 @@ def create_user_json(user):
                     'total': journey.travel_type.co2_exhausts,
                     'saved': TravelType.all().filter('name', 'Average').get().co2_exhausts - journey.travel_type.co2_exhausts
                 }
-            user_travel_types[journey.travel_type.name]['distance'] += round(sum(point.distance for point in points), 4)
+            user_travel_types[journey.travel_type.name]['distance'] += round(journey.distance, 4)
 
     # Save all data
-    total_co2 = 0.0
-    total_saved = 0.0
-    total_distance = 0.0
+    total_co2 = total_saved = total_distance = 0.0
     for travel_type in user_travel_types:
         # For each travel type
         travel_type = user_travel_types[travel_type]
@@ -192,6 +192,7 @@ def create_user_json(user):
         total_distance += distance
         total_saved += travel_type['saved']
         total_co2 += travel_type['total']
+
     # Create json
     user_json = {
         'facebook_id': user.facebook_id,
@@ -202,3 +203,10 @@ def create_user_json(user):
         'travel_types': user_travel_types
     }
     return user_json
+
+
+def create_journey_distances(user):
+    for journey in Journey.all().filter('distance', 0.0).filter('user', user):
+        points = Point.all().filter('journey', journey)
+        journey.distance = sum(point.distance for point in points) if points.count() > 0 else 0.000001
+        journey.put()

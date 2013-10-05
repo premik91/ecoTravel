@@ -13,6 +13,7 @@
         };
         var map;
         $(document).ready(function () {
+            {% if journey_points %}
             path = [
                 {% for point in journey_points %}
                     [{{ point.latitude }}, {{ point.longitude }}]{% if not forloop.last %},{% endif %}
@@ -42,6 +43,10 @@
                 strokeOpacity: 0.6,
                 strokeWeight: 4
             });
+            {% else %}
+            $('#map').text("This Journey doesn't exist");
+            {% endif %}
+
         });
     </script>
 </head>

@@ -2,5 +2,6 @@
 .DS_Store
 
 ecoTravelTitanium/build/
-
+*.pyc
 ecoTravelTitanium/Resources/
+.idea/
