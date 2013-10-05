@@ -12,3 +12,9 @@ http://eco-travel-gae.appspot.com/api/travel/types/
 
 Get specific travel type
 http://eco-travel-gae.appspot.com/api/travel/types/{Type}
+
+## DEBUG
+User journey map:
+
+http://eco-travel-gae.appspot.com/journey/map/{journeyID}
+
