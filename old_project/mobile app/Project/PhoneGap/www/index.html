@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi"/>
+    <title>EcoTravel</title>
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.0.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+
+    <script type="text/javascript" src="javascript/cordova-2.6.0.js"></script>
+    <script type="text/javascript" src="javascript/jquery.js"></script>
+    <script type="text/javascript" src="javascript/custom.js"></script>
+    <!-- cordova facebook plugin -->
+    <script src="javascript/cdv-plugin-fb-connect.js"></script>
+    <!-- facebook js sdk -->
+    <script src="javascript/facebook_js_sdk.js"></script>
+</head>
+<body>
+<div data-role="page" id="login-page">
+    <!--------- HEADER -->
+    <div data-role="header">
+        <h1>Facebook Login</h1>
+    </div>
+
+    <!--------- CONTENT -->
+    <div data-role="content">
+        <div id="leaf-image">
+            <img src="images/leaf.png" width="600" height="600">
+        </div>
+
+        <div id="facebook-button">
+            <img src="images/facebook-icon.png" alt="facebook" width="256" height="256" id="fb-icon">
+            <div>Facebook prijava</div>
+        </div>
+        <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow custom-list" id="information">
+            <li>
+                Za uporabo aplikacije vas prosimo, da aplikaciji dovolite dostop do vašega Facebook računa.
+                Izberite zgornji gumb Facebook prijava in v novem oknu izberite Potrdi.
+            </li>
+            <li>
+                <div>Nimaš Facebook računa? <a href="https://www.facebook.com/">Klikni tukaj</a></div>
+            </li>
+        </ul>
+    </div>
+
+    <!--------- FOOTER -->
+    <div data-role="footer" data-id="foo1" data-position="fixed">
+        <h1></h1>
+    </div>
+</div>
+</body>
+</html>

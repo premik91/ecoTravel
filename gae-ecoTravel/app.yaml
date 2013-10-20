@@ -8,6 +8,9 @@ handlers:
 - url: /static
   static_dir: ecoTravel/static
 
+- url: /test.*
+  script: libs.gaeunit.application
+
 - url: /.*
   script: main.app
 

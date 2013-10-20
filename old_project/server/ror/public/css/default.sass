@@ -1,0 +1,883 @@
+@font-face
+	font-family: FreeSans
+	src: url('../fonts/FreeSans/FreeSans.woff') format("woff")
+	font-weight: normal
+	font-style: normal
+@font-face
+	font-family: FreeSans
+	src: url('../fonts/FreeSans/FreeSansBold.woff') format("woff")
+	font-weight: bold
+	font-style: normal
+@font-face
+	font-family: Cabin
+	src: url('../fonts/Cabin/Cabin-SemiBold.ttf') format("truetype")
+	font-style: normal
+	font-weight: bold
+
+@mixin abs
+	position: absolute
+	top: 0px
+	right: 0px
+	bottom: 0px
+	left: 0px
+
+$red: #BB0F2F
+
+$shadowBlue: #488DAA
+$shadowRed: #AE3737
+$shadowGreen: #7AB64A
+$shadowPurple: #A562D8
+$shadowYellow: #DD9922
+@mixin shadow
+	box-shadow: inset 0 0 25px rgba(0,0,0,0.6)
+	border: 1px solid #333
+	border-radius: 2px
+
+@mixin wood
+	background: url('../img/design/wood.jpg')
+	@include shadow
+
+@mixin transition($value)
+	transition: #{$value}
+	-webkit-transition: #{$value}
+	-moz-transition: #{$value}
+	-o-transition: #{$value}
+	-ms-transition: #{$value}
+@mixin userSelect($value)
+	user-select: #{$value}
+	-webkit-user-select: #{$value}
+	-moz-user-select: #{$value}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td
+	margin: 0
+	padding: 0
+table
+	border-collapse: collapse
+	border-spacing: 0
+fieldset, img
+	border: 0
+address, caption, cite, code, dfn, em, strong, th, var
+	font-style: normal
+	font-weight: normal
+ol, ul
+	list-style: none
+caption, th
+	text-align: left
+h1, h2, h3, h4, h5, h6
+	font-size: 100%
+	font-weight: normal
+q:before, q:after
+	content: ''
+abbr, acronym
+	border: 0px
+
+*
+	@include userSelect('none')
+
+\:-webkit-full-screen
+	width: 100%
+	height: 100%
+
+body
+	font-family: FreeSans, Helvetica, Arial, sans-serif
+	font-size: 12px
+	overflow: hidden
+	background: white
+	cursor: default
+
+a
+	text-decoration: none
+	color: #2C6A94
+	outline: none
+
+p
+	margin-bottom: 5px
+
+h1, h2, h3
+	margin-top: 5px
+	margin-bottom: 4px
+	font-family: Cabin, sans-serif
+h1
+	font-size: 24px
+h2
+	font-size: 20px
+h3
+	font-size: 17px
+
+strong
+	font-weight: bold
+
+iframe
+	border: 0px
+	width: 100%
+	height: 100%
+
+hr
+	height: 0px
+	border: 0px
+	border-top: 1px solid black
+	margin: 1px
+
+li
+	margin-left: 20px
+
+input[type=button], input[type=submit], input[type=radio], input[type=checkbox], label
+	cursor: pointer
+input[type=button], input[type=submit], input[type=text], option, textarea
+	padding: 5px
+	margin: 3px
+	font-size: inherit
+	font-family: inherit
+
+	@include userSelect('text')
+textarea
+	width: 300px
+	height: 100px
+input[type=text], textarea
+	border: 1px solid gray
+
+.clear
+	clear: both
+
+/* HEADER */
+$menuBlue: #E1E9EB
+$menuYellow: #EEEDC4
+
+#header
+	position: absolute
+	width: 160px
+	top: 10px
+	bottom: 5px
+	left: 10px
+	.logo
+		width: 150px
+		margin: 5px
+		margin-bottom: 15px
+	#profile
+		display: none
+		position: relative
+		border: 1px solid #DDD
+		border-radius: 2px
+		padding-top: 5px
+		padding-left: 5px
+		margin-bottom: 7px
+		height: 57px
+		font-size: 11px
+		img
+			float: left
+			width: 50px
+			height: 50px
+			border: 1px solid #444
+			margin-right: 7px
+		h3
+			overflow: hidden
+			margin-top: 0px
+			margin-bottom: 0px
+			font-size: 14px
+		a
+			position: absolute
+			right: 5px
+			bottom: 4px
+			cursor: pointer
+			font-size: 10px
+		&.male
+			background: #F8FFEB
+		&.female
+			background: #F8EBFF
+		&.no
+			background: #EEE
+	#menu
+		margin-bottom: 50px
+		a, div
+			display: block
+			color: #333
+			cursor: pointer
+			border-radius: 3px
+			border: 1px solid darken($menuBlue, 10%)
+			padding: 3px 5px
+			margin-bottom: 3px
+			background-repeat: no-repeat
+			background-color: $menuBlue
+			&:hover
+				background-color: $menuYellow
+				border: 1px solid darken($menuYellow, 10%)
+			&.fullscreen
+				background-image: url('../img/design/icons/fullscreen.png')
+				background-position: 6px 6px
+				padding-left: 36px
+			&.big
+				float: left
+				margin-right: 3px
+				width: 36px
+				height: 36px
+				padding: 0px
+				background-position: center center
+				&:last-of-type
+					margin-right: 0px
+					width: 35px
+				&.zoomout
+					background-image: url('../img/design/icons/zoom-out.png')
+				&.zoomorig
+					background-image: url('../img/design/icons/zoom-original.png')
+				&.zoomin
+					background-image: url('../img/design/icons/zoom-in.png')
+				&.volume
+					&.v0
+						background-image: url('../img/design/icons/volume0.png')
+					&.v1
+						background-image: url('../img/design/icons/volume1.png')
+					&.v2
+						background-image: url('../img/design/icons/volume2.png')
+					&.v3
+						background-image: url('../img/design/icons/volume3.png')
+				&.language
+					&.en
+						background-image: url('../img/design/flags/si.png')
+					&.si
+						background-image: url('../img/design/flags/en.png')
+	#facebookIframe
+		border: none
+		overflow: hidden
+		height: 80px
+
+/* CONTENT */
+#content
+	position: absolute
+	top: 5px
+	right: 5px
+	bottom: 5px
+	left: 180px
+
+#tabs
+	margin-left: 20px
+	font-family: 'Cabin', sans-serif
+	font-size: 15px
+	a
+		@include shadow
+		background: $shadowBlue
+		display: none
+		float: left
+		height: 24px
+		border-radius: 5px 5px 0px 0px
+		color: white
+		padding: 6px 15px
+		padding-bottom: 0px
+		border-bottom: 0px
+		margin-left: 3px
+		opacity: 0.9
+		&.game
+			background: $shadowRed
+		&.active, &:hover
+			opacity: 1
+			text-decoration: underline
+			font-weight: bold
+
+#login
+	padding-left: 20px
+	padding-top: 10px
+	text-align: center
+	.panel
+		margin-top: 20px
+		height: 60%
+		max-height: 357px
+		max-width: 588px
+	.options
+		height: 40%
+		> div
+			text-align: left
+			vertical-align: top
+			display: inline-block
+			width: 250px
+			margin: 30px 30px
+			input[type=text]
+				width: 120px
+			.facebookButton
+				display: inline-block
+				color: white
+				border: 1px solid #29447E
+				border-bottom-color: #1A356E
+				font-weight: bold
+				background: url('../img/design/fb.png') no-repeat
+				font-size: 20px
+				height: 29px
+				width: 110px
+				margin-top: 5px
+				padding-left: 54px
+				padding-top: 6px
+				&:hover
+					opacity: .82
+
+/* CONTENT > LOBBY > GAMES */
+#games
+	padding-top: 10px
+	padding-left: 5px
+	.game
+		display: inline-block
+		vertical-align: top
+		width: 180px
+		margin-left: 8px
+		margin-bottom: 10px
+		color: white
+		font-size: 11px
+		@include shadow
+		background: $shadowRed
+		border-radius: 3px
+		h3
+			text-align: center
+			font-size: 14px
+			overflow: hidden
+			background: rgba(0,0,0,.2)
+			margin: 0px
+			padding: 6px
+		p
+			text-align: center
+			margin: 5px 7px
+			line-height: 14px
+			span
+				white-space: nowrap
+		.players
+			background: rgba(255,255,255,.2)
+			padding: 3px
+			padding-bottom: 4px
+			.player, .join
+				display: inline-block
+				vertical-align: top
+				overflow: hidden
+				white-space: nowrap
+				width: 73px
+				height: 30px
+				padding: 1px 4px
+				margin: 2px
+				@include shadow
+				background: $shadowYellow
+				&.join
+					cursor: pointer
+					text-align: center
+					font-size: 21px
+					padding-top: 3px
+					height: 28px
+					background: $shadowPurple
+				&.me
+					background: $shadowRed
+				span:first-of-type
+					display: block
+					overflow: hidden
+					margin-bottom: 1px
+				.leave
+					float: right
+					font-size: 16px
+					width: 10px
+					height: 10px
+					margin-top: -3px
+					margin-right: -1px
+					color: black
+					cursor: pointer
+		.actions
+			margin: 6px
+			margin-top: 4px
+			div
+				cursor: pointer
+				display: inline-block
+				margin-left: 10px
+
+/* CONTENT > GAME */
+#pages
+	@include abs
+	top: 30px
+	> div
+		@include abs
+		@include wood
+		display: none
+		border-radius: 5px
+		.right
+			overflow: auto
+			@include abs
+			left: auto
+			width: 170px
+			padding: 10px
+			color: black
+			color: #444
+			h2
+				color: black
+			> div
+				background: rgba(255,255,255,0.4)
+				padding: 5px
+				margin-bottom: 3px
+				border-radius: 4px
+				border: 1px solid rgba(0,0,0,0.3)
+				box-shadow: 1px 1px 0px rgba(0,0,0,0.1)
+		.left
+			overflow: auto
+			@include abs
+			right: 190px
+		.window
+			@include wood
+			position: absolute
+			top: 25%
+			left: 30%
+			display: inline-block
+			text-align: left
+			min-height: 70px
+			min-width: 250px
+			z-index: 2000
+			padding: 10px 15px
+			opacity: 0.9
+			.close
+				position: absolute
+				top: 2px
+				right: 2px
+				padding: 0px 8px
+				font-size: 24px
+				font-weight: bold
+				opacity: .7
+				cursor: pointer
+				&:hover
+					opacity: 1
+					color: $red
+
+#pages #create
+	padding-bottom: 0px
+	> div
+		margin-top: 8px
+		.rounds, .rating, .tempo
+			&.slider
+				margin: 4px
+				margin-top: 10px
+			&.amount
+				color: #0f6bca
+		input[type=text]
+			box-sizing: border-box
+			width: 100%
+			font-size: 12px
+			padding: 2px
+			margin: 0px
+			margin-top: 5px
+			background: rgba(255,255,255,.4)
+			border: 0px
+			outline: none
+			&:hover, &:focus
+				background: rgba(255,255,255,.7)
+		strong
+			display: block
+		label
+			display: block
+			margin-left: 10px
+		p
+			padding-top: 5px
+			padding-left: 3px
+			font-size: 11px
+			font-style: italic
+	input[type=submit]
+		width: 100%
+
+#pages .game
+	.right
+		overflow: hidden
+		width: 220px
+		padding-top: 12px
+		.gameInfo
+			position: relative
+			height: 32px
+			.type, .suit
+				display: inline-block
+				vertical-align: top
+			.type
+				width: 160px
+			.suit
+				font-size: 50px
+				line-height: 35px
+				margin-left: 7px
+				margin-top: -5px
+				color: black
+				&.d, &.h
+					color: #CE3D44
+			.options
+				position: absolute
+				padding: 0px 5px
+				right: 45px
+				top: 20px
+				cursor: pointer
+				font-size: 17px
+				&:hover
+					color: $red
+					& .menu, .menu:hover
+						display: block
+				.menu
+					@include wood
+					border: 0px
+					position: absolute
+					display: none
+					top: 20px
+					right: 0px
+					width: 130px
+					padding: 10px
+					color: black
+					font-size: 12px
+					a
+						display: block
+						padding: 2px
+						margin-bottom: 2px
+						&:hover
+							color: $red
+		.timer div
+			font-size: 12px
+			height: 27px
+			display: inline-block
+			vertical-align: top
+			&.time
+				float: right
+				font-size: 30px
+				line-height: 27px
+				margin-right: 4px
+		&.onMove
+			.timer .time
+				color: $red
+		.results
+			display: none
+			.history > div > div, .names > div, .radli > div, .sum > div
+				white-space: nowrap
+				overflow: hidden
+				display: inline-block
+				width: 45px
+				margin-right: 4px
+				text-align: center
+			.names, .sum
+				font-size: 11px
+				font-weight: bold
+			.names, .radli, .sum
+				overflow: hidden
+				height: 14px
+			.history
+				border-top: 1px solid black
+				border-bottom: 1px solid black
+				margin: 2px 0px
+				padding-bottom: 3px
+				font-size: 11px
+				height: 67px
+				overflow-y: auto
+				overflow-x: hidden
+				white-space: nowrap
+				> .bold
+					font-weight: bold
+				> div
+					&:hover
+						background: rgba(0,0,0,.1)
+						cursor: pointer
+					> div
+						margin-right: 7px
+		.chat
+			font-size: 11px
+			width: 208px
+			position: absolute
+			z-index: 1100
+			background-image: url('../img/design/bubble.png')
+			background-repeat: no-repeat
+			background-position: top right
+			h3
+				text-align: right
+				margin-top: 0px
+				margin-right: 5px
+			.history
+				overflow-y: auto
+				height: 200px
+				div
+					margin-bottom: 3px
+					white-space: pre-wrap
+					.time
+						color: #888
+						font-size: 9px
+						display: none
+						margin-left: 8px
+					&:hover .time
+						display: inline-block
+			textarea
+				border: 0px
+				border-top: 1px dotted gray
+				background: transparent
+				outline: 0px
+				height: 30px
+				padding: 4px
+				width: 92%
+	.left
+		overflow: hidden
+		right: 240px
+		.player
+			display: none
+			width: 100px
+			position: absolute
+			z-index: 20
+			background: rgba(100,100,100,0.3) no-repeat
+			border-radius: 2px
+			border: 1px solid #444
+			box-shadow: 1px 1px 0px rgba(255,255,255,0.3)
+			&.onMove
+				border-color: $red
+			.picture
+				display: inline-block
+				vertical-align: top
+				width: 90px
+				height: 90px
+				padding: 5px
+				&:hover div
+					display: none
+				div
+					font-size: 12px
+					background: rgba(0,0,0,0.7)
+					color: white
+					border-radius: 4px
+					padding: 2px 5px
+					display: inline-block
+					margin-bottom: 4px
+					margin-right: 10px
+			.openCards
+				display: inline-block
+				vertical-align: top
+				padding: 5px 0px 0px 5px
+				font-size: 0px
+				&:empty
+					display: none
+				div
+					position: relative
+					display: inline-block
+					vertical-align: top
+					overflow: hidden
+					width: 40px
+					height: 40px
+					margin: 0px 5px 5px 0px
+					background: white
+					border: 1px solid #444
+					border-radius: 5px
+					font-family: Cabin
+					span
+						@include abs
+						margin-top: 5px
+						color: black
+						font-size: 22px
+						text-align: center
+					&:before
+						position: absolute
+						bottom: -12px
+						right: -8px
+						font-size: 35px
+					&.typeC:before
+						content: '♣'
+					&.typeD:before
+						color: $red
+						content: '♦'
+					&.typeH:before
+						color: $red
+						content: '♥'
+					&.typeS:before
+						content: '♠'
+			&.p1
+				right: 10px
+			&.p2
+				top: 10px
+				width: auto
+				.openCards
+					width: 284px
+			&.p3
+				left: 10px
+		.stack, .lifted
+			position: absolute
+			z-index: 10
+			width: 150px
+			height: 0px
+			text-align: center
+			&.beggar
+				width: 80px
+				margin-top: -50px
+				.card
+					position: relative
+					margin-bottom: -110px
+					width: 60px
+					padding: 4px
+			&.\34
+				margin-top: -70px
+				padding-left: 20px
+		.window
+			&.bid
+				.choice, .bids
+					width: 340px
+					height: 110px
+					div
+						float: left
+						width: 38px
+						height: 33px
+						margin: 5px
+						padding: 1px 3px
+						font-size: 11px
+						text-align: center
+						overflow: hidden
+						color: #333
+						border: 1px solid #666
+				.choice
+					div
+						cursor: pointer
+						&:hover
+							border-color: $red
+				.bids
+					div
+						overflow-y: auto
+						width: 65px
+						height: 88px
+						p
+							border-bottom: 1px dotted #666
+							margin: 0px
+							padding: 1px
+							&:first-of-type
+								font-weight: bold
+			&.call
+				.card
+					cursor: pointer
+					display: inline-block
+					margin: 10px 7px 3px 7px
+			&.talon
+				div
+					cursor: pointer
+					display: inline-block
+					margin: 10px 7px 3px 7px
+					padding-left: 50px
+					.card
+						margin-left: -50px
+			&.announce
+				.header div
+					font-weight: bold
+					text-align: center
+					padding-bottom: 3px
+				.data div
+					&:not(.header) div
+						@include shadow
+						background: $shadowGreen
+						border-radius: 5px
+						height: 15px
+						&:first-of-type
+							background: $shadowYellow
+						&.option
+							background: $shadowRed
+					div
+						display: inline-block
+						vertical-align: top
+						width: 90px
+						padding: 5px 5px 5px 10px
+						margin: 1px
+				input[type=submit]
+					visibility: hidden
+				.upgrade
+					margin-top: 15px
+			&.scores
+				h3
+					margin-top: 7px
+					text-align: center
+				.data div
+					display: inline-block
+					vertical-align: top
+					min-height: 120px
+					margin: 0px 8px
+					margin-bottom: 10px
+					li
+						margin-left: 0px
+						margin-bottom: 2px
+						padding-right: 12px
+						color: #222
+						strong
+							display: inline-block
+							width: 25px
+							text-align: right
+							margin-right: 12px
+							color: black
+						&.sum
+							font-style: italic
+							border-top: 1px solid rgba(0,0,0,.5)
+							margin-top: 4px
+							padding-top: 4px
+			&.ended
+				.place
+					font-size: 30px
+	.cards
+		position: absolute
+		z-index: 1000
+		right: -500px
+		left: 0px
+		bottom: 0px
+
+/* CARDS */
+.cards img, .card
+	width: 80px
+	display: inline-block
+	background: white
+	padding: 7px
+	border: 1px solid #888
+	border-radius: 10px
+	box-shadow: 1px 1px 2px #999
+	&.disabled
+		background-color: #E3C1A1
+		-webkit-filter: sepia(1) #{'saturate(1.5)'}
+.cards
+	height: 180px
+	overflow: hidden
+	padding-left: 80px
+	padding-right: 20px
+	padding-top: 0px
+	img
+		float: left
+		vertical-align: top
+		margin-left: -40px
+		margin-top: 40px
+		cursor: pointer
+		@include transition('margin .3s, width .3s')
+		&:hover
+			border: 1px solid #941E16
+			margin-right: 30px
+			margin-top: 10px
+			width: 110px
+			@include transition('margin .2s, width .2s')
+
+/* TEMPLATES */
+#templates
+	display: none
+
+/* EXTEND */
+$extendOff: #111
+$extendOn: #C21333
+
+#extend
+	position: absolute
+	top: 50%
+	left: -11px
+	z-index: 100000
+	width: 0
+	height: 0
+	border-top: 16px solid transparent
+	border-bottom: 16px solid transparent
+	border-right: 11px solid $extendOff
+	&:hover
+		border-right-color: $extendOn
+		cursor: pointer
+	&.on
+		left: 0px
+		border-right: 0px
+		border-left: 11px solid $extendOff
+		&:hover
+			border-left-color: $extendOn
+
+/* jQuery UI */
+.ui-draggable-dragging
+	cursor: move
+.ui-corner-all
+	border-radius: 2px
+.ui-slider
+	position: relative
+	height: 5px
+	border: 1px solid #888
+	background: white
+	.ui-slider-handle
+		position: absolute
+		z-index: 2
+		cursor: pointer
+		margin-left: -6px
+		margin-top: -3px
+		width: 9px
+		height: 9px
+		border: 1px solid darken(#5382A9, 20%)
+		background: #5382A9
